@@ -7,9 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BBE2FFC6260A9C5A00EDA28E /* GradientBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBE2FFC5260A9C5A00EDA28E /* GradientBackgroundView.swift */; };
+		BBE2FFCF260AA38500EDA28E /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBE2FFCE260AA38500EDA28E /* UIViewControllerExtensions.swift */; };
+		BBE2FFD4260AA3ED00EDA28E /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBE2FFD3260AA3ED00EDA28E /* SignUpViewController.swift */; };
+		BBE2FFD9260AA46E00EDA28E /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBE2FFD8260AA46E00EDA28E /* ProfileViewController.swift */; };
+		BBE2FFE5260AA59900EDA28E /* HomeNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBE2FFE4260AA59900EDA28E /* HomeNavigationController.swift */; };
 		F8FA715C2607A1150051F286 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8FA715B2607A1150051F286 /* AppDelegate.swift */; };
 		F8FA715E2607A1150051F286 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8FA715D2607A1150051F286 /* SceneDelegate.swift */; };
-		F8FA71602607A1150051F286 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8FA715F2607A1150051F286 /* ViewController.swift */; };
+		F8FA71602607A1150051F286 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8FA715F2607A1150051F286 /* LoginViewController.swift */; };
 		F8FA71632607A1150051F286 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8FA71612607A1150051F286 /* Main.storyboard */; };
 		F8FA71662607A1150051F286 /* ChatApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F8FA71642607A1150051F286 /* ChatApp.xcdatamodeld */; };
 		F8FA71682607A1160051F286 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8FA71672607A1160051F286 /* Assets.xcassets */; };
@@ -36,10 +41,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BBE2FFC5260A9C5A00EDA28E /* GradientBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientBackgroundView.swift; sourceTree = "<group>"; };
+		BBE2FFCE260AA38500EDA28E /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
+		BBE2FFD3260AA3ED00EDA28E /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		BBE2FFD8260AA46E00EDA28E /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		BBE2FFE4260AA59900EDA28E /* HomeNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeNavigationController.swift; sourceTree = "<group>"; };
 		F8FA71582607A1150051F286 /* ChatApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChatApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8FA715B2607A1150051F286 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F8FA715D2607A1150051F286 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		F8FA715F2607A1150051F286 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F8FA715F2607A1150051F286 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		F8FA71622607A1150051F286 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F8FA71652607A1150051F286 /* ChatApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ChatApp.xcdatamodel; sourceTree = "<group>"; };
 		F8FA71672607A1160051F286 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -78,6 +88,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BBE2FFCA260AA23100EDA28E /* UIComponents */ = {
+			isa = PBXGroup;
+			children = (
+				BBE2FFC5260A9C5A00EDA28E /* GradientBackgroundView.swift */,
+			);
+			path = UIComponents;
+			sourceTree = "<group>";
+		};
+		BBE2FFDD260AA57C00EDA28E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				BBE2FFCE260AA38500EDA28E /* UIViewControllerExtensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		F8FA714F2607A1150051F286 = {
 			isa = PBXGroup;
 			children = (
@@ -103,7 +129,12 @@
 			children = (
 				F8FA715B2607A1150051F286 /* AppDelegate.swift */,
 				F8FA715D2607A1150051F286 /* SceneDelegate.swift */,
-				F8FA715F2607A1150051F286 /* ViewController.swift */,
+				F8FA715F2607A1150051F286 /* LoginViewController.swift */,
+				BBE2FFD3260AA3ED00EDA28E /* SignUpViewController.swift */,
+				BBE2FFD8260AA46E00EDA28E /* ProfileViewController.swift */,
+				BBE2FFE4260AA59900EDA28E /* HomeNavigationController.swift */,
+				BBE2FFCA260AA23100EDA28E /* UIComponents */,
+				BBE2FFDD260AA57C00EDA28E /* Extensions */,
 				F8FA71612607A1150051F286 /* Main.storyboard */,
 				F8FA71672607A1160051F286 /* Assets.xcassets */,
 				F8FA71692607A1160051F286 /* LaunchScreen.storyboard */,
@@ -261,10 +292,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F8FA71602607A1150051F286 /* ViewController.swift in Sources */,
+				F8FA71602607A1150051F286 /* LoginViewController.swift in Sources */,
+				BBE2FFD4260AA3ED00EDA28E /* SignUpViewController.swift in Sources */,
 				F8FA71662607A1150051F286 /* ChatApp.xcdatamodeld in Sources */,
 				F8FA715C2607A1150051F286 /* AppDelegate.swift in Sources */,
+				BBE2FFE5260AA59900EDA28E /* HomeNavigationController.swift in Sources */,
 				F8FA715E2607A1150051F286 /* SceneDelegate.swift in Sources */,
+				BBE2FFCF260AA38500EDA28E /* UIViewControllerExtensions.swift in Sources */,
+				BBE2FFD9260AA46E00EDA28E /* ProfileViewController.swift in Sources */,
+				BBE2FFC6260A9C5A00EDA28E /* GradientBackgroundView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
