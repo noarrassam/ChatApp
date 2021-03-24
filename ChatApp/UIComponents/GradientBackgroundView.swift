@@ -9,8 +9,8 @@ import UIKit
 
 final class GradientBackgroundView: UIView {
 
-
     var colors: [UIColor] = [#colorLiteral(red: 0.5176470588, green: 0.8078431373, blue: 0.9098039216, alpha: 1), #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)]
+    
     private let gradientLayer = CAGradientLayer()
     
     override func didMoveToSuperview() {

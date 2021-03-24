@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BB723FED260AB32F007E0A58 /* ChatListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB723FEC260AB32F007E0A58 /* ChatListViewController.swift */; };
+		BB723FF2260ABAC7007E0A58 /* ProfileRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB723FF1260ABAC7007E0A58 /* ProfileRowView.swift */; };
+		BBB18D69260ABE9000535A5B /* FillButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB18D68260ABE9000535A5B /* FillButton.swift */; };
 		BBE2FFC6260A9C5A00EDA28E /* GradientBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBE2FFC5260A9C5A00EDA28E /* GradientBackgroundView.swift */; };
 		BBE2FFCF260AA38500EDA28E /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBE2FFCE260AA38500EDA28E /* UIViewControllerExtensions.swift */; };
 		BBE2FFD4260AA3ED00EDA28E /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBE2FFD3260AA3ED00EDA28E /* SignUpViewController.swift */; };
@@ -41,6 +44,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BB723FEC260AB32F007E0A58 /* ChatListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatListViewController.swift; sourceTree = "<group>"; };
+		BB723FF1260ABAC7007E0A58 /* ProfileRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileRowView.swift; sourceTree = "<group>"; };
+		BBB18D68260ABE9000535A5B /* FillButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FillButton.swift; sourceTree = "<group>"; };
 		BBE2FFC5260A9C5A00EDA28E /* GradientBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientBackgroundView.swift; sourceTree = "<group>"; };
 		BBE2FFCE260AA38500EDA28E /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
 		BBE2FFD3260AA3ED00EDA28E /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
@@ -91,7 +97,9 @@
 		BBE2FFCA260AA23100EDA28E /* UIComponents */ = {
 			isa = PBXGroup;
 			children = (
+				BB723FF1260ABAC7007E0A58 /* ProfileRowView.swift */,
 				BBE2FFC5260A9C5A00EDA28E /* GradientBackgroundView.swift */,
+				BBB18D68260ABE9000535A5B /* FillButton.swift */,
 			);
 			path = UIComponents;
 			sourceTree = "<group>";
@@ -132,6 +140,7 @@
 				F8FA715F2607A1150051F286 /* LoginViewController.swift */,
 				BBE2FFD3260AA3ED00EDA28E /* SignUpViewController.swift */,
 				BBE2FFD8260AA46E00EDA28E /* ProfileViewController.swift */,
+				BB723FEC260AB32F007E0A58 /* ChatListViewController.swift */,
 				BBE2FFE4260AA59900EDA28E /* HomeNavigationController.swift */,
 				BBE2FFCA260AA23100EDA28E /* UIComponents */,
 				BBE2FFDD260AA57C00EDA28E /* Extensions */,
@@ -296,8 +305,11 @@
 				BBE2FFD4260AA3ED00EDA28E /* SignUpViewController.swift in Sources */,
 				F8FA71662607A1150051F286 /* ChatApp.xcdatamodeld in Sources */,
 				F8FA715C2607A1150051F286 /* AppDelegate.swift in Sources */,
+				BB723FED260AB32F007E0A58 /* ChatListViewController.swift in Sources */,
 				BBE2FFE5260AA59900EDA28E /* HomeNavigationController.swift in Sources */,
+				BBB18D69260ABE9000535A5B /* FillButton.swift in Sources */,
 				F8FA715E2607A1150051F286 /* SceneDelegate.swift in Sources */,
+				BB723FF2260ABAC7007E0A58 /* ProfileRowView.swift in Sources */,
 				BBE2FFCF260AA38500EDA28E /* UIViewControllerExtensions.swift in Sources */,
 				BBE2FFD9260AA46E00EDA28E /* ProfileViewController.swift in Sources */,
 				BBE2FFC6260A9C5A00EDA28E /* GradientBackgroundView.swift in Sources */,
