@@ -9,6 +9,8 @@ import UIKit
 
 class ProfileViewController: UIViewController {
 
+    @IBOutlet weak var accountInfoRowView: ProfileRowView!
+    @IBOutlet weak var settingRowView: ProfileRowView!
     @IBOutlet weak var headerView: GradientBackgroundView!
     @IBOutlet weak var profileImageView: UIImageView!
     @IBOutlet weak var userLabel: UILabel!
@@ -16,6 +18,23 @@ class ProfileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         headerView.colors = [#colorLiteral(red: 0.4039215686, green: 0.7294117647, blue: 0.9294117647, alpha: 1), #colorLiteral(red: 0.5019607843, green: 0.5019607843, blue: 0.5019607843, alpha: 1)]
+        navigationController?.setNavigationBarHidden(true, animated: false)
+        accountInfoRowView.action = { [weak self] in
+            if let accountInfoViewController = self?.view.window?.rootViewController?.storyboard?.instantiateViewController(identifier: "AccountInfoViewController") {
+                self?.navigationController?.pushViewController(accountInfoViewController, animated: true)
+            }
+        }
+        
+        settingRowView.action = { [weak self] in
+            if let settingViewController = self?.view.window?.rootViewController?.storyboard?.instantiateViewController(identifier: "SettingViewController") {
+                self?.navigationController?.pushViewController(settingViewController, animated: true)
+            }
+        }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: true)
     }
     
 

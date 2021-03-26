@@ -9,6 +9,8 @@ import UIKit
 
 class ProfileRowView: UIView {
     
+    var action: (() -> ())?
+    
     @IBInspectable
     var leadingImage: UIImage = .init() {
         didSet {
@@ -25,28 +27,43 @@ class ProfileRowView: UIView {
 
     private let leadingImageView = UIImageView()
     private let leadingLabel = UILabel()
+    private let stackView = UIStackView()
+    
+    var hasLeadingImage = true {
+        didSet {
+            leadingImageView.isHidden = !hasLeadingImage
+        }
+    }
 
     override func didMoveToSuperview() {
         super.didMoveToSuperview()
-        addSubview(leadingImageView)
-        addSubview(leadingLabel)
+        addSubview(stackView)
         
-        leadingImageView.translatesAutoresizingMaskIntoConstraints = false
-        leadingLabel.translatesAutoresizingMaskIntoConstraints = false
+        leadingLabel.font = .systemFont(ofSize: 12)
+        stackView.addArrangedSubview(leadingImageView)
+        stackView.addArrangedSubview(leadingLabel)
+        stackView.spacing = 8
+        
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        
+        NSLayoutConstraint.activate([
+            stackView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 8),
+            stackView.centerYAnchor.constraint(equalTo: centerYAnchor)
+        ])
         
         NSLayoutConstraint.activate([
             leadingImageView.widthAnchor.constraint(equalToConstant: 34),
             leadingImageView.heightAnchor.constraint(equalToConstant: 34),
-            leadingImageView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 8),
-            leadingImageView.centerYAnchor.constraint(equalTo: centerYAnchor)
         ])
         
-        NSLayoutConstraint.activate([
-            leadingLabel.leadingAnchor.constraint(equalTo: leadingImageView.trailingAnchor, constant: 8),
-            leadingLabel.centerYAnchor.constraint(equalTo: centerYAnchor)
-        ])
         backgroundColor = .white
         
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(didTap))
+        addGestureRecognizer(tapGesture)
+    }
+    
+    @objc private func didTap() {
+        action?()
     }
     
     override func layoutSublayers(of layer: CALayer) {
