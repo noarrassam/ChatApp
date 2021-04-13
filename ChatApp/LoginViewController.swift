@@ -34,7 +34,6 @@ class LoginViewController: UIViewController {
         } else {
             viewModel.password = sender.text
         }
-        
         checkFormStatus()
     }
     
@@ -54,7 +53,7 @@ class LoginViewController: UIViewController {
     // MARK: -Helpers
     
     @IBAction func Login(_ sender: Any) {
-        login.addTarget(self, action: #selector(handleLogin), for: .touchUpInside)
+        handleLogin()
     }
     
     
