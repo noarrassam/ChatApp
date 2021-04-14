@@ -5,9 +5,10 @@
 //  Created by Noor Rassam on 2021-04-11.
 //
 
+import UIKit
 import TextFieldEffects
 import Firebase
-import UIKit
+import JGProgressHUD
 
 protocol AuthenticiationControllerProtocol {
     func checkFormStatus()
@@ -41,12 +42,20 @@ class LoginViewController: UIViewController {
         guard let email = email.text else {return}
         guard let password = pass.text else {return}
         
-        Auth.auth().signIn(withEmail: email, password: password) { (result, error) in
+        let hud = JGProgressHUD(style: .dark)
+        hud.textLabel.text = "Logging in"
+        hud.show(in: view)
+        
+        AuthService.shared.logUserIn(withEmail: email, password: password) {
+            result, error in
             if let error = error {
                 print("DEBUG: Failed to login with error \(error.localizedDescription)")
+                hud.dismiss()
                 return
             }
-            self.dismiss(animated: true, completion: nil)
+            
+            hud.dismiss()
+            // self.dismiss(animated: true, completion: nil)
         }
     }
     

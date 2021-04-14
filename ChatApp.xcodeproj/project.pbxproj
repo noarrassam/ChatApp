@@ -17,6 +17,7 @@
 		F89BEF5B2623EAD10038B92A /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F89BEF5A2623EAD10038B92A /* LoginViewModel.swift */; };
 		F89BEF742623F58D0038B92A /* RegistrationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F89BEF732623F58D0038B92A /* RegistrationController.swift */; };
 		F8BC142626235F1A006DF264 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8BC142526235F1A006DF264 /* LoginViewController.swift */; };
+		F8C6FE812627401C001BF279 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C6FE802627401C001BF279 /* AuthService.swift */; };
 		F8FA715C2607A1150051F286 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8FA715B2607A1150051F286 /* AppDelegate.swift */; };
 		F8FA715E2607A1150051F286 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8FA715D2607A1150051F286 /* SceneDelegate.swift */; };
 		F8FA71602607A1150051F286 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8FA715F2607A1150051F286 /* ViewController.swift */; };
@@ -62,6 +63,7 @@
 		F89BEF5A2623EAD10038B92A /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		F89BEF732623F58D0038B92A /* RegistrationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationController.swift; sourceTree = "<group>"; };
 		F8BC142526235F1A006DF264 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		F8C6FE802627401C001BF279 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		F8FA71582607A1150051F286 /* ChatApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChatApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8FA715B2607A1150051F286 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F8FA715D2607A1150051F286 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -150,6 +152,7 @@
 		F89BEF182623D8310038B92A /* API */ = {
 			isa = PBXGroup;
 			children = (
+				F8C6FE802627401C001BF279 /* AuthService.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -500,6 +503,7 @@
 				F89BEF742623F58D0038B92A /* RegistrationController.swift in Sources */,
 				F8FA71662607A1150051F286 /* ChatApp.xcdatamodeld in Sources */,
 				F8FA715C2607A1150051F286 /* AppDelegate.swift in Sources */,
+				F8C6FE812627401C001BF279 /* AuthService.swift in Sources */,
 				F89BEF4B2623E8040038B92A /* Extentions.swift in Sources */,
 				F8BC142626235F1A006DF264 /* LoginViewController.swift in Sources */,
 				F89BEF1E2623D8A80038B92A /* ConversationsController.swift in Sources */,

@@ -5,9 +5,9 @@
 //  Created by Noor Rassam on 2021-04-11.
 //
 
+import UIKit
 import TextFieldEffects
 import Firebase
-import UIKit
 
 class RegistrationController: UIViewController {
 
@@ -45,6 +45,18 @@ class RegistrationController: UIViewController {
         present(imagePickerController, animated: true, completion: nil)
     }
     
+    @objc func keyboardWillShow() {
+        if view.frame.origin.y == 0 {
+            self.view.frame.origin.y -= 88
+        }
+    }
+    
+    @objc func keyboardWillHide() {
+        if view.frame.origin.y != 0 {
+            self.view.frame.origin.y = 0
+        }
+    }
+    
     @objc func textDidChange(sender: UITextField){
         if sender == email {
             viewModel.email = sender.text
@@ -61,7 +73,6 @@ class RegistrationController: UIViewController {
     @objc func handleShowLogin() {
         dismiss(animated: true, completion: nil)
     }
-    
     
     @IBAction func PlusButton(_ sender: Any) {
         plusBtn.tintColor = .white
@@ -81,41 +92,18 @@ class RegistrationController: UIViewController {
         guard let username = username.text?.lowercased() else {return}
         guard let profileImage = profileImage else {return}
         
-        guard let imageData = profileImage.jpegData(compressionQuality: 0.3) else {return}
+        let credentials = RegistrationCredentials(email: email, password: password, fullname: fullname, username: username, profileImage: profileImage)
         
-        let filename = NSUUID().uuidString
-        let ref = Storage.storage().reference(withPath: "/profile_images/\(filename)")
+        showLoader(true, withText:"Sigining You Up")
         
-        ref.putData(imageData, metadata: nil) { (meta, error) in
+        AuthService.shared.createUser(credentials: credentials) { error in
             if let error = error {
-                print("DEBUG: Failed to upload image with error \(error.localizedDescription)")
+                print("DEBUG: \(error.localizedDescription)")
+                self.showLoader(false)
                 return
             }
-            
-            ref.downloadURL { (url, error) in
-                guard let profileImageUrl = url?.absoluteString else {return}
-                Auth.auth().createUser(withEmail: email, password: password) { (result, error) in
-                    if let error = error {
-                        print("DEBUG: Failed to create user with error: \(error.localizedDescription)")
-                        return
-                    }
-                    
-                    guard let uid = result?.user.uid else {return}
-                    
-                    let data = ["email":email,
-                                "fullname": fullname,
-                                "profileImageUrl": profileImageUrl,
-                                "uid": uid,
-                                "username": username] as [String: Any]
-                    Firestore.firestore().collection("users").document(uid).setData(data){ error in
-                        if let error = error {
-                            print("DEBUG: Failed to upload user data error: \(error.localizedDescription)")
-                            return
-                        }
-                        self.dismiss(animated: true, completion: nil)
-                    }
-                }
-            }
+            self.showLoader(false)
+            self.dismiss(animated: true, completion: nil)
         }
     }
     
@@ -128,7 +116,6 @@ class RegistrationController: UIViewController {
         signUp.isEnabled = false
         //view.addSubview(plusPhotoButton)
         //plusPhotoButton.centerX(inView: view)
-        //Hor kiddaaaa => what's up?
         
         //plusBtn.translatesAutoresizingMaskIntoConstraints = false
         //plusPhotoButton.center = view.center
@@ -146,6 +133,9 @@ class RegistrationController: UIViewController {
         password.addTarget(self, action: #selector(textDidChange), for: .editingChanged)
         fullname.addTarget(self, action: #selector(textDidChange), for: .editingChanged)
         username.addTarget(self, action: #selector(textDidChange), for: .editingChanged)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
 }
 
