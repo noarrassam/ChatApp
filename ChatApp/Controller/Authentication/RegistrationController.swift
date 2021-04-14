@@ -11,7 +11,6 @@ import Firebase
 
 class RegistrationController: UIViewController {
 
-    
     @IBOutlet weak var email: MadokaTextField!
     @IBOutlet weak var password: MadokaTextField!
     @IBOutlet weak var fullname: MadokaTextField!

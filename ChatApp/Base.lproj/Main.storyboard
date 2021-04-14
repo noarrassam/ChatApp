@@ -94,7 +94,7 @@
                                 <state key="normal" image="loginBtn"/>
                                 <connections>
                                     <action selector="Login:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iBs-fj-tc3"/>
-                                    <segue destination="BrD-K3-Ytu" kind="showDetail" id="kqI-VC-B7R"/>
+                                    <segue destination="BrD-K3-Ytu" kind="showDetail" identifier="gotologin" id="kqI-VC-B7R"/>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="donTHaveAnAccount" translatesAutoresizingMaskIntoConstraints="NO" id="odY-RI-Owa">

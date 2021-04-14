@@ -23,6 +23,8 @@ class LoginViewController: UIViewController {
     
     @IBOutlet weak var login: UIButton!
     
+    let loginToList = "gotologin"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUI()
@@ -48,13 +50,17 @@ class LoginViewController: UIViewController {
         
         AuthService.shared.logUserIn(withEmail: email, password: password) {
             result, error in
+            
             if let error = error {
                 print("DEBUG: Failed to login with error \(error.localizedDescription)")
                 hud.dismiss()
                 return
+            }else{
+                self.performSegue(withIdentifier: "gotologin", sender: self)
+                hud.dismiss()
             }
             
-            hud.dismiss()
+            
             // self.dismiss(animated: true, completion: nil)
         }
     }
