@@ -56,11 +56,11 @@ class LoginViewController: UIViewController {
                 hud.dismiss()
                 return
             }else{
-                self.performSegue(withIdentifier: "gotologin", sender: self)
+                let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                let newViewController = storyBoard.instantiateViewController(withIdentifier: "toMasterTab") as! ConversationController
+                        self.present(newViewController, animated: true, completion: nil)
                 hud.dismiss()
             }
-            
-            
             // self.dismiss(animated: true, completion: nil)
         }
     }
@@ -70,7 +70,6 @@ class LoginViewController: UIViewController {
     @IBAction func Login(_ sender: Any) {
         handleLogin()
     }
-    
     
     func configureUI() {
         login.isEnabled = false
