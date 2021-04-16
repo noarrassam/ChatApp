@@ -5,8 +5,8 @@
 //  Created by Noor Rassam on 2021-03-21.
 //
 
-import TransitionButton
 import UIKit
+import TransitionButton
 
 class ViewController: UIViewController {
 

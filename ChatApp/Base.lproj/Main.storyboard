@@ -258,10 +258,10 @@
             </objects>
             <point key="canvasLocation" x="-1221" y="858"/>
         </scene>
-        <!--View Controller-->
+        <!--Forgot Password Controller-->
         <scene sceneID="HwZ-ZM-Pf2">
             <objects>
-                <viewController id="jg9-IY-NzE" sceneMemberID="viewController">
+                <viewController id="jg9-IY-NzE" customClass="ForgotPasswordController" customModule="ChatApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QKc-wj-EGw">
                         <rect key="frame" x="0.0" y="0.0" width="428" height="872"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -279,16 +279,6 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mailIcon" translatesAutoresizingMaskIntoConstraints="NO" id="Hyf-le-ILd">
                                 <rect key="frame" x="59" y="310.66666666666669" width="21" height="21"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="donTHaveAnAccount" translatesAutoresizingMaskIntoConstraints="NO" id="CTy-nD-ed0">
-                                <rect key="frame" x="97" y="753" width="170" height="17"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="grj-KA-cMf">
-                                <rect key="frame" x="267" y="736" width="51" height="24"/>
-                                <state key="normal" image="signUp"/>
-                                <connections>
-                                    <segue destination="V2U-V7-Xu6" kind="show" id="t1q-h6-6aa"/>
-                                </connections>
-                            </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="email" translatesAutoresizingMaskIntoConstraints="NO" id="yqn-X1-YaN">
                                 <rect key="frame" x="73" y="295" width="52" height="53"/>
                             </imageView>
@@ -318,31 +308,49 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5gX-79-0w8">
                                 <rect key="frame" x="46.666666666666657" y="423" width="335" height="52"/>
                                 <state key="normal" image="sendBtn"/>
+                                <connections>
+                                    <action selector="forgotPassBtn:" destination="jg9-IY-NzE" eventType="touchUpInside" id="Jdc-hZ-Iig"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="alreadyHaveAnAccount" translatesAutoresizingMaskIntoConstraints="NO" id="CSH-Jr-c1N">
+                                <rect key="frame" x="107" y="750" width="166" height="14"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7dT-Z8-MZg">
+                                <rect key="frame" x="281" y="746" width="34" height="22"/>
+                                <state key="normal" image="logIn"/>
+                                <connections>
+                                    <action selector="login:" destination="V2U-V7-Xu6" eventType="touchUpInside" id="LE0-cK-yBi"/>
+                                    <action selector="login:" destination="jg9-IY-NzE" eventType="touchUpInside" id="r4D-KW-BfN"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Ns6-h3-0Bs"/>
                         <color key="backgroundColor" systemColor="systemTealColor"/>
                         <constraints>
                             <constraint firstItem="YXN-FC-V1w" firstAttribute="leading" secondItem="Ns6-h3-0Bs" secondAttribute="leading" constant="34" id="08c-kA-Ty4"/>
-                            <constraint firstItem="CTy-nD-ed0" firstAttribute="centerX" secondItem="QKc-wj-EGw" secondAttribute="centerX" constant="-25" id="0qY-AT-b2I"/>
                             <constraint firstItem="qGd-8c-oCK" firstAttribute="centerY" secondItem="QKc-wj-EGw" secondAttribute="centerY" constant="-363.5" id="2NM-zF-dGa"/>
+                            <constraint firstItem="7dT-Z8-MZg" firstAttribute="centerY" secondItem="QKc-wj-EGw" secondAttribute="centerY" constant="321" id="3kA-Na-oYq"/>
                             <constraint firstItem="Ns6-h3-0Bs" firstAttribute="trailing" secondItem="YXN-FC-V1w" secondAttribute="trailing" constant="35" id="40i-aI-83h"/>
                             <constraint firstItem="Hyf-le-ILd" firstAttribute="centerX" secondItem="QKc-wj-EGw" secondAttribute="centerX" constant="-144.5" id="5Fa-Pt-RFJ"/>
+                            <constraint firstItem="CSH-Jr-c1N" firstAttribute="centerX" secondItem="QKc-wj-EGw" secondAttribute="centerX" constant="-24" id="5KW-WA-4Ns"/>
                             <constraint firstItem="qGd-8c-oCK" firstAttribute="centerX" secondItem="QKc-wj-EGw" secondAttribute="centerX" id="9VM-S7-kqe"/>
-                            <constraint firstItem="grj-KA-cMf" firstAttribute="centerY" secondItem="QKc-wj-EGw" secondAttribute="centerY" constant="312" id="M8h-SU-q0e"/>
                             <constraint firstItem="5gX-79-0w8" firstAttribute="centerX" secondItem="QKc-wj-EGw" secondAttribute="centerX" id="STC-tB-ABH"/>
                             <constraint firstItem="5gX-79-0w8" firstAttribute="centerY" secondItem="QKc-wj-EGw" secondAttribute="centerY" constant="13" id="XI9-yS-ogk"/>
                             <constraint firstItem="YXN-FC-V1w" firstAttribute="top" secondItem="Hyf-le-ILd" secondAttribute="bottom" constant="13.000000000000057" id="bql-LZ-MRt"/>
+                            <constraint firstItem="7dT-Z8-MZg" firstAttribute="centerX" secondItem="QKc-wj-EGw" secondAttribute="centerX" constant="84" id="eU5-lJ-5MO"/>
                             <constraint firstItem="Hyf-le-ILd" firstAttribute="centerY" secondItem="QKc-wj-EGw" secondAttribute="centerY" constant="-115" id="fj9-Mg-ceF"/>
                             <constraint firstItem="yF0-QK-s61" firstAttribute="centerY" secondItem="QKc-wj-EGw" secondAttribute="centerY" constant="-286.5" id="g6h-Xs-Xop"/>
                             <constraint firstItem="yqn-X1-YaN" firstAttribute="centerX" secondItem="QKc-wj-EGw" secondAttribute="centerX" constant="-108" id="k7r-as-9xV"/>
                             <constraint firstItem="yqn-X1-YaN" firstAttribute="centerY" secondItem="QKc-wj-EGw" secondAttribute="centerY" constant="-99.5" id="kyl-V2-WqG"/>
-                            <constraint firstItem="grj-KA-cMf" firstAttribute="centerX" secondItem="QKc-wj-EGw" secondAttribute="centerX" constant="78.5" id="ne6-Ts-v1R"/>
-                            <constraint firstItem="CTy-nD-ed0" firstAttribute="centerY" secondItem="QKc-wj-EGw" secondAttribute="centerY" constant="313.5" id="ntL-tC-i1e"/>
                             <constraint firstItem="yF0-QK-s61" firstAttribute="centerX" secondItem="QKc-wj-EGw" secondAttribute="centerX" id="qIX-8Z-OBY"/>
+                            <constraint firstItem="CSH-Jr-c1N" firstAttribute="centerY" secondItem="QKc-wj-EGw" secondAttribute="centerY" constant="321" id="tJM-Vb-Lst"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="3X1-XZ-Gs6"/>
+                    <connections>
+                        <outlet property="email" destination="YXN-FC-V1w" id="q1N-JO-moU"/>
+                        <outlet property="sendBtn" destination="5gX-79-0w8" id="T1e-v4-KxC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="an1-6a-Z3h" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1080,9 +1088,6 @@
             <size key="intrinsicContentSize" width="117.33333333333333" height="29.666666666666668"/>
         </designable>
     </designables>
-    <inferredMetricsTieBreakers>
-        <segue reference="8AE-D4-4H5"/>
-    </inferredMetricsTieBreakers>
     <resources>
         <image name="Decoration" width="92.666664123535156" height="69"/>
         <image name="Logo" width="81.333335876464844" height="26"/>

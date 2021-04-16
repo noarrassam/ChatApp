@@ -12,6 +12,7 @@
 		E660C0EF2A999498B694E6F0 /* Pods_ChatAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7973375D70EB911D8CA10A6C /* Pods_ChatAppTests.framework */; };
 		F80320FB26250CB900286194 /* RegistrationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80320FA26250CB900286194 /* RegistrationViewModel.swift */; };
 		F803210826251A7F00286194 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F803210726251A7F00286194 /* GoogleService-Info.plist */; };
+		F82774E22627C5E1006D6BF3 /* ForgotPasswordController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F82774E12627C5E1006D6BF3 /* ForgotPasswordController.swift */; };
 		F89BEF1E2623D8A80038B92A /* ConversationsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F89BEF1D2623D8A80038B92A /* ConversationsController.swift */; };
 		F89BEF4B2623E8040038B92A /* Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F89BEF4A2623E8040038B92A /* Extentions.swift */; };
 		F89BEF5B2623EAD10038B92A /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F89BEF5A2623EAD10038B92A /* LoginViewModel.swift */; };
@@ -58,6 +59,7 @@
 		D62F946DA0208B739950C7CB /* Pods-ChatApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChatApp.release.xcconfig"; path = "Target Support Files/Pods-ChatApp/Pods-ChatApp.release.xcconfig"; sourceTree = "<group>"; };
 		F80320FA26250CB900286194 /* RegistrationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewModel.swift; sourceTree = "<group>"; };
 		F803210726251A7F00286194 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
+		F82774E12627C5E1006D6BF3 /* ForgotPasswordController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordController.swift; sourceTree = "<group>"; };
 		F89BEF1D2623D8A80038B92A /* ConversationsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationsController.swift; sourceTree = "<group>"; };
 		F89BEF4A2623E8040038B92A /* Extentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extentions.swift; sourceTree = "<group>"; };
 		F89BEF5A2623EAD10038B92A /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
@@ -237,6 +239,7 @@
 				F8FA716C2607A1160051F286 /* Info.plist */,
 				F8FA71642607A1150051F286 /* ChatApp.xcdatamodeld */,
 				F803210726251A7F00286194 /* GoogleService-Info.plist */,
+				F82774E12627C5E1006D6BF3 /* ForgotPasswordController.swift */,
 			);
 			path = ChatApp;
 			sourceTree = "<group>";
@@ -499,6 +502,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F8FA71602607A1150051F286 /* ViewController.swift in Sources */,
+				F82774E22627C5E1006D6BF3 /* ForgotPasswordController.swift in Sources */,
 				F80320FB26250CB900286194 /* RegistrationViewModel.swift in Sources */,
 				F89BEF742623F58D0038B92A /* RegistrationController.swift in Sources */,
 				F8FA71662607A1150051F286 /* ChatApp.xcdatamodeld in Sources */,

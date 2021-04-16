@@ -8,6 +8,7 @@
 import Firebase
 import UIKit
 
+
 struct RegistrationCredentials {
     let email: String
     let password: String
