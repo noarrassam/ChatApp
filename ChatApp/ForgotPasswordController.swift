@@ -8,10 +8,6 @@
 import UIKit
 import TextFieldEffects
 import Firebase
-import JGProgressHUD
-
-let ERROR_EMPTY_EMAIL_RESET = "Please enter an email address for password reset"
-let SUCCESS_EMAIL_RESET = "We have just sent you a password reset email. Please check inbox and follow the instruction to reset you password"
 
 class ForgotPasswordController: UIViewController {
     
