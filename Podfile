@@ -23,6 +23,14 @@ target 'ChatApp' do
   pod 'Firebase/Auth'
   pod 'Firebase/Firestore'
   pod 'SDWebImage','~>4.4.2'
-  pod 'JGProgressHUD','~>2.0.3'	 	
+  pod 'JGProgressHUD','~>2.0.3'	
+  pod 'MessageKit'
+
+  pod 'FacebookCore'
+  pod 'FacebookLogin'
+  pod 'FacebookShare'
+  pod 'Firebase/Database'
+  pod 'Alamofire'
+  pod 'Kingfisher' 	
 
 end

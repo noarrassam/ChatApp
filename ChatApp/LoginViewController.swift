@@ -15,7 +15,6 @@ protocol AuthenticiationControllerProtocol {
 }
 
 class LoginViewController: UIViewController {
-    
     private var viewModel = LoginViewModel()
     
     @IBOutlet weak var email: HoshiTextField!
@@ -56,9 +55,11 @@ class LoginViewController: UIViewController {
                 hud.dismiss()
                 return
             }else{
-                let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-                let newViewController = storyBoard.instantiateViewController(withIdentifier: "toMasterTab") as! ConversationController
-                        self.present(newViewController, animated: true, completion: nil)
+                //let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                //let newViewController = storyBoard.instantiateViewController(withIdentifier: "toMasterTab") as! ConversationController
+                        //self.present(newViewController, animated: true, completion: nil)
+                let mainVC = self.storyboard?.instantiateViewController(withIdentifier: "tabVC") as! UITabBarController
+                self.navigationController!.pushViewController(mainVC, animated: true)
                 hud.dismiss()
             }
             // self.dismiss(animated: true, completion: nil)
