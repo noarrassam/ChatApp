@@ -103,6 +103,7 @@
 		156B0147262E28530038BD57 /* ConstraintMakerRelatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156B00E2262E28530038BD57 /* ConstraintMakerRelatable.swift */; };
 		156B0148262E28530038BD57 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 156B00E3262E28530038BD57 /* Assets.xcassets */; };
 		156B014D262E28530038BD57 /* ChatUIConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156B00E9262E28530038BD57 /* ChatUIConfiguration.swift */; };
+		156B014F262E36330038BD57 /* DashboardTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156B014E262E36330038BD57 /* DashboardTabBarController.swift */; };
 		2E3E82C2C29CCA759321A288 /* Pods_ChatApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FACAABDB7BB9861DD087760 /* Pods_ChatApp.framework */; };
 		AB5345577A207792312E077F /* Pods_ChatApp_ChatAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF51D4C8345E849A31763238 /* Pods_ChatApp_ChatAppUITests.framework */; };
 		E660C0EF2A999498B694E6F0 /* Pods_ChatAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7973375D70EB911D8CA10A6C /* Pods_ChatAppTests.framework */; };
@@ -242,6 +243,7 @@
 		156B00E2262E28530038BD57 /* ConstraintMakerRelatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintMakerRelatable.swift; sourceTree = "<group>"; };
 		156B00E3262E28530038BD57 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		156B00E9262E28530038BD57 /* ChatUIConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatUIConfiguration.swift; sourceTree = "<group>"; };
+		156B014E262E36330038BD57 /* DashboardTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardTabBarController.swift; sourceTree = "<group>"; };
 		5C25C21B81D0EC3CC47F54B7 /* Pods-ChatAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChatAppTests.release.xcconfig"; path = "Target Support Files/Pods-ChatAppTests/Pods-ChatAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		69784579DB5970294314DA3B /* Pods-ChatAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChatAppTests.debug.xcconfig"; path = "Target Support Files/Pods-ChatAppTests/Pods-ChatAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		74ABA192FC2AC971E4B3FA0F /* Pods-ChatApp-ChatAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChatApp-ChatAppUITests.release.xcconfig"; path = "Target Support Files/Pods-ChatApp-ChatAppUITests/Pods-ChatApp-ChatAppUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -709,6 +711,7 @@
 				F8FA715D2607A1150051F286 /* SceneDelegate.swift */,
 				F8FA715F2607A1150051F286 /* ViewController.swift */,
 				F8FA71612607A1150051F286 /* Main.storyboard */,
+				156B014E262E36330038BD57 /* DashboardTabBarController.swift */,
 				F8FA71672607A1160051F286 /* Assets.xcassets */,
 				F8FA71692607A1160051F286 /* LaunchScreen.storyboard */,
 				F8FA716C2607A1160051F286 /* Info.plist */,
@@ -1071,6 +1074,7 @@
 				156B0132262E28530038BD57 /* ConstraintInsetTarget.swift in Sources */,
 				156B00FB262E28530038BD57 /* Date.swift in Sources */,
 				156B0145262E28530038BD57 /* ConstraintLayoutGuide+Extensions.swift in Sources */,
+				156B014F262E36330038BD57 /* DashboardTabBarController.swift in Sources */,
 				156B013B262E28530038BD57 /* ConstraintMakerEditable.swift in Sources */,
 				F8FA715E2607A1150051F286 /* SceneDelegate.swift in Sources */,
 				156B00F8262E28530038BD57 /* ATCChatMockStore.swift in Sources */,

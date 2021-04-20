@@ -58,7 +58,7 @@ class LoginViewController: UIViewController {
                 //let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
                 //let newViewController = storyBoard.instantiateViewController(withIdentifier: "toMasterTab") as! ConversationController
                         //self.present(newViewController, animated: true, completion: nil)
-                let mainVC = self.storyboard?.instantiateViewController(withIdentifier: "tabVC") as! UITabBarController
+                let mainVC = self.storyboard?.instantiateViewController(withIdentifier: "tabVC") as! DashboardTabBarController
                 self.navigationController!.pushViewController(mainVC, animated: true)
                 hud.dismiss()
             }

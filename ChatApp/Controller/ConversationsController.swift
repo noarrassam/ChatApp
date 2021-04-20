@@ -15,20 +15,19 @@ class ConversationController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //configureUI()
         authenticateUser()
-        let config = ChatUIConfiguration()
-        config.configureUI()
-        let threadsDataSource = ATCGenericLocalHeteroDataSource(items: ATCChatMockStore.threads)
-        let remoteData = ATCRemoteData()
-        remoteData.getChannels()
-        let user = 2
-        let newViewController :  ChatHostViewController = ChatHostViewController(uiConfig: config,
-                                        threadsDataSource: threadsDataSource,
-                                        viewer: ATCChatMockStore.users[user])
-        print("currentUser: \(ATCChatMockStore.users[user].debugDescription)")
-        //self.navigationController!.pushViewController(newViewController, animated: true)
-        self.present(newViewController, animated: true, completion: nil)
+//        let config = ChatUIConfiguration()
+//        config.configureUI()
+//        let threadsDataSource = ATCGenericLocalHeteroDataSource(items: ATCChatMockStore.threads)
+//        let remoteData = ATCRemoteData()
+//        remoteData.getChannels()
+//        let user = 2
+//        let newViewController :  ChatHostViewController = ChatHostViewController(uiConfig: config,
+//                                        threadsDataSource: threadsDataSource,
+//                                        viewer: ATCChatMockStore.users[user])
+//        print("currentUser: \(ATCChatMockStore.users[user].debugDescription)")
+//        //self.navigationController!.pushViewController(newViewController, animated: true)
+//        self.present(newViewController, animated: true, completion: nil)
     }
     
     // MARK: - API
