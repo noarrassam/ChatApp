@@ -56,7 +56,7 @@ class LoginViewController: UIViewController {
                 return
             }else{
                 let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-                let newViewController = storyBoard.instantiateViewController(withIdentifier: "toMasterTab") as! ConversationController
+                let newViewController = storyBoard.instantiateViewController(withIdentifier: "tabVC") as! DashboardTabBarController
                         self.present(newViewController, animated: true, completion: nil)
 //                let mainVC = self.storyboard?.instantiateViewController(withIdentifier: "toMasterTab") as! ConversationController
 //                self.navigationController?.pushViewController(mainVC, animated: true)
