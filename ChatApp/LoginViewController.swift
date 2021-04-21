@@ -55,11 +55,11 @@ class LoginViewController: UIViewController {
                 hud.dismiss()
                 return
             }else{
-                //let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-                //let newViewController = storyBoard.instantiateViewController(withIdentifier: "toMasterTab") as! ConversationController
-                        //self.present(newViewController, animated: true, completion: nil)
-                let mainVC = self.storyboard?.instantiateViewController(withIdentifier: "tabVC") as! DashboardTabBarController
-                self.navigationController!.pushViewController(mainVC, animated: true)
+                let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                let newViewController = storyBoard.instantiateViewController(withIdentifier: "toMasterTab") as! ConversationController
+                        self.present(newViewController, animated: true, completion: nil)
+//                let mainVC = self.storyboard?.instantiateViewController(withIdentifier: "toMasterTab") as! ConversationController
+//                self.navigationController?.pushViewController(mainVC, animated: true)
                 hud.dismiss()
             }
             // self.dismiss(animated: true, completion: nil)
@@ -73,7 +73,7 @@ class LoginViewController: UIViewController {
     }
     
     func configureUI() {
-        login.isEnabled = false
+        login!.isEnabled = false
         navigationController?.navigationBar.isHidden = true
         navigationController?.navigationBar.barStyle = .black
         
