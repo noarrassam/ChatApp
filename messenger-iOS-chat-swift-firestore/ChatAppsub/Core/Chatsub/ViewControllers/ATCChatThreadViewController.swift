@@ -196,6 +196,7 @@ class ATCChatThreadViewController: MessagesViewController, MessagesDataSource, I
           guard let image = image else {
             return
           }
+          
           message.image = image
           self.insertNewMessage(message)
         }
@@ -219,32 +220,14 @@ class ATCChatThreadViewController: MessagesViewController, MessagesDataSource, I
     metadata.contentType = "image/jpeg"
     
     let imageName = [UUID().uuidString, String(Date().timeIntervalSince1970)].joined()
-    
     storage.child(channel.id).child(imageName).putData(data, metadata: metadata) { meta, error in
-        //completion(metadata?.downloadURL() as? URL)
-        //print(data)
-        self.storage.child(channel.id).child(imageName).downloadURL { url, error in
-            if let err = error{
-                   // error happened - implement code to handle it
-                   print(err)
-                
-                } else {
-                   // no error happened; so just continue with your code
-                    //let res = url?.absoluteString
-                    var message = ATChatMessage(user: self.user, image: image)
-                    message.downloadURL = url!
-                    self.save(message)
-                    self.messagesCollectionView.scrollToBottom()
-                   //print(url?.absoluteString) // this is the actual download url - the absolute string
-                }
-        }
+      //completion(meta?.downloadURL() as? URL)
     }
-
   }
   
   private func sendPhoto(_ image: UIImage) {
     print("is sending photo")
-    //isSendingPhoto = true
+    isSendingPhoto = true
     
     uploadImage(image, to: channel) { [weak self] url in
       guard let `self` = self else {
@@ -252,23 +235,23 @@ class ATCChatThreadViewController: MessagesViewController, MessagesDataSource, I
         return
       }
       self.isSendingPhoto = false
-//
-//      guard let url = url else {
-//        return
-//      }
-//
-//      var message = ATChatMessage(user: self.user, image: image)
-//      message.downloadURL = url
-//      self.save(message)
-//      self.messagesCollectionView.scrollToBottom()
+      
+      guard let url = url else {
+        return
+      }
+      
+      var message = ATChatMessage(user: self.user, image: image)
+      message.downloadURL = url
+      self.save(message)
+      self.messagesCollectionView.scrollToBottom()
     }
   }
   
   private func downloadImage(at url: URL, completion: @escaping (UIImage?) -> Void) {
     let ref = Storage.storage().reference(forURL: url.absoluteString)
-    //let megaByte = Int64(3 * 1024 * 1024)
-    print(ref)
-    ref.getData(maxSize: 1 * 1024 * 1024) { data, error in
+    let megaByte = Int64(1 * 1024 * 1024)
+    
+    ref.getData(maxSize: megaByte) { data, error in
       guard let imageData = data else {
         completion(nil)
         return
@@ -387,45 +370,24 @@ extension ATCChatThreadViewController: MessagesDisplayDelegate {
 
 extension ATCChatThreadViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
   
-//  func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-//    picker.dismiss(animated: true, completion: nil)
-//    print("picker did finish picking photo")
-//
-//    if let asset = info["phAsset"] as? PHAsset {
-//      let size = CGSize(width: 500, height: 500)
-//      PHImageManager.default().requestImage(for: asset, targetSize: size, contentMode: .aspectFit, options: nil) { result, info in
-//        guard let image = result else {
-//          print("picker image selection had no result")
-//          return
-//        }
-//
-//        self.sendPhoto(image)
-//      }
-//    } else if let image = info["originalImage"] as? UIImage {
-//      sendPhoto(image)
-//    }
-//  }
+  func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+    picker.dismiss(animated: true, completion: nil)
+    print("picker did finish picking photo")
     
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        //let chosenImage = info[UIImagePickerController.InfoKey.originalImage] as! UIImage
-        dismiss(animated:true, completion: nil)
-            print("picker did finish picking photo")
+    if let asset = info["phAsset"] as? PHAsset {
+      let size = CGSize(width: 500, height: 500)
+      PHImageManager.default().requestImage(for: asset, targetSize: size, contentMode: .aspectFit, options: nil) { result, info in
+        guard let image = result else {
+          print("picker image selection had no result")
+          return
+        }
         
-            if let asset = info[UIImagePickerController.InfoKey.originalImage] as? PHAsset {
-              let size = CGSize(width: 500, height: 500)
-              PHImageManager.default().requestImage(for: asset, targetSize: size, contentMode: .aspectFit, options: nil) { result, info in
-                guard let image = result else {
-                  print("picker image selection had no result")
-                  return
-                }
-        
-                self.sendPhoto(image)
-              }
-            } else if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
-              sendPhoto(image)
-            }
+        self.sendPhoto(image)
+      }
+    } else if let image = info["originalImage"] as? UIImage {
+      sendPhoto(image)
     }
-    
+  }
   
   func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
     print("picker did cancel")

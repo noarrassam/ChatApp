@@ -660,7 +660,7 @@
                                     <constraint firstAttribute="height" constant="548" id="acF-yE-YsX"/>
                                 </constraints>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="iow-i6-P4H">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="channelCell" id="iow-i6-P4H">
                                         <rect key="frame" x="0.0" y="24.333333969116211" width="428" height="43.666667938232422"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="iow-i6-P4H" id="l3H-Yc-09Q">
@@ -669,6 +669,10 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="cyO-ne-gtX" id="tGb-9g-4O7"/>
+                                    <outlet property="delegate" destination="cyO-ne-gtX" id="6C9-n0-7lG"/>
+                                </connections>
                             </tableView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="msgImage" translatesAutoresizingMaskIntoConstraints="NO" id="gAK-bZ-yeX">
                                 <rect key="frame" x="38" y="150" width="106" height="22"/>
@@ -677,7 +681,7 @@
                                 <rect key="frame" x="320" y="721" width="88" height="94"/>
                                 <state key="normal" image="navBar1"/>
                                 <connections>
-                                    <segue destination="ijP-KP-I3c" kind="show" id="psh-o0-lcK"/>
+                                    <action selector="tapAddChannel:" destination="cyO-ne-gtX" eventType="touchUpInside" id="ZXE-4S-XbK"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -698,6 +702,9 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="eFA-Cr-M4E"/>
                     <navigationItem key="navigationItem" id="Wi6-bS-5NU"/>
+                    <connections>
+                        <outlet property="table" destination="1Qd-h1-Anb" id="LO8-WA-Kgd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e1i-0P-Z3n" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -707,21 +714,21 @@
         <scene sceneID="aMO-W6-frI">
             <objects>
                 <viewController id="ijP-KP-I3c" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="LSf-lr-i5C">
+                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="LSf-lr-i5C">
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="rectangleGredient" translatesAutoresizingMaskIntoConstraints="NO" id="BQm-U8-pUY">
                                 <rect key="frame" x="14.666666666666657" y="-68" width="399" height="265"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="newmsgImage" translatesAutoresizingMaskIntoConstraints="NO" id="UPm-XQ-b7o">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="newmsgImage" translatesAutoresizingMaskIntoConstraints="NO" id="UPm-XQ-b7o">
                                 <rect key="frame" x="156" y="77" width="103" height="15"/>
                             </imageView>
-                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="u2K-bh-aRG">
+                            <searchBar contentMode="redraw" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="u2K-bh-aRG">
                                 <rect key="frame" x="0.0" y="220" width="428" height="51"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="SzV-Jp-nxU">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="SzV-Jp-nxU">
                                 <rect key="frame" x="0.0" y="271" width="428" height="548"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
@@ -742,7 +749,7 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WmK-QX-Szi">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WmK-QX-Szi">
                                 <rect key="frame" x="350" y="115" width="38" height="22"/>
                                 <state key="normal" image="cancel"/>
                             </button>
@@ -774,11 +781,11 @@
             <objects>
                 <viewController id="O2Z-8I-Yp0" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="TR9-wX-jxt">
-                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="872"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="A7H-uj-vXp">
-                                <rect key="frame" x="0.0" y="88" width="428" height="603"/>
+                                <rect key="frame" x="0.0" y="0.0" width="428" height="628.66666666666663"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="133" id="F5B-Rv-Agf">
@@ -816,16 +823,16 @@
                                 </prototypes>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F60-gd-jgg">
-                                <rect key="frame" x="0.0" y="691" width="428" height="201"/>
+                                <rect key="frame" x="0.0" y="628.66666666666663" width="428" height="209.33333333333337"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Jf-Ag-we0">
-                                        <rect key="frame" x="360.33333333333331" y="123.00000000000001" width="59.666666666666686" height="44.666666666666671"/>
+                                        <rect key="frame" x="360.33333333333331" y="127.99999999999999" width="59.666666666666686" height="46.333333333333329"/>
                                         <state key="normal" title="Send">
                                             <color key="titleColor" systemColor="opaqueSeparatorColor"/>
                                         </state>
                                     </button>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="enter messages" textAlignment="natural" minimumFontSize="17" background="eventnametextbox" translatesAutoresizingMaskIntoConstraints="NO" id="Q3n-cs-yFk">
-                                        <rect key="frame" x="8" y="33.666666666666629" width="342.33333333333331" height="134"/>
+                                        <rect key="frame" x="8" y="34.666666666666742" width="342.33333333333331" height="139.66666666666666"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
@@ -1079,25 +1086,25 @@
     </scenes>
     <designables>
         <designable name="9r6-9u-eVn">
-            <size key="intrinsicContentSize" width="149" height="29.666666666666668"/>
+            <size key="intrinsicContentSize" width="137" height="18.666666666666668"/>
         </designable>
         <designable name="AMg-3x-ZDH">
-            <size key="intrinsicContentSize" width="219.33333333333334" height="26"/>
+            <size key="intrinsicContentSize" width="219.33333333333334" height="25.666666666666668"/>
         </designable>
         <designable name="Htd-CN-vyD">
-            <size key="intrinsicContentSize" width="147" height="29.666666666666668"/>
+            <size key="intrinsicContentSize" width="135" height="18.666666666666668"/>
         </designable>
         <designable name="QPE-eV-Okk">
             <size key="intrinsicContentSize" width="180" height="24"/>
         </designable>
         <designable name="YXN-FC-V1w">
-            <size key="intrinsicContentSize" width="142.33333333333334" height="26"/>
+            <size key="intrinsicContentSize" width="142.33333333333334" height="25.666666666666668"/>
         </designable>
         <designable name="k4K-j0-EoQ">
-            <size key="intrinsicContentSize" width="145" height="28"/>
+            <size key="intrinsicContentSize" width="133" height="17"/>
         </designable>
         <designable name="u3I-Xm-teN">
-            <size key="intrinsicContentSize" width="117.33333333333333" height="29.666666666666668"/>
+            <size key="intrinsicContentSize" width="105.33333333333333" height="18.666666666666668"/>
         </designable>
     </designables>
     <resources>
