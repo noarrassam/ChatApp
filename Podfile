@@ -31,6 +31,6 @@ target 'ChatApp' do
   pod 'FacebookShare'
   pod 'Firebase/Database'
   pod 'Alamofire'
-  pod 'Kingfisher' 	
+  pod 'Kingfisher'
 
 end
