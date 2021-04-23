@@ -40,6 +40,8 @@ class LoginViewController: UIViewController {
     }
     
     @objc func handleLogin() {
+        
+        email.text = "n@g.com"
         guard let email = email.text else {return}
         guard let password = pass.text else {return}
         
@@ -56,9 +58,9 @@ class LoginViewController: UIViewController {
                 return
             }else{
                 let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-                let newViewController = storyBoard.instantiateViewController(withIdentifier: "tabVC") as! DashboardTabBarController
-                        self.present(newViewController, animated: true, completion: nil)
-//                let mainVC = self.storyboard?.instantiateViewController(withIdentifier: "toMasterTab") as! ConversationController
+                let newViewController = storyBoard.instantiateViewController(withIdentifier: "tabVC")
+                self.present(newViewController, animated: true, completion: nil)
+                //                let mainVC = self.storyboard?.instantiateViewController(withIdentifier: "toMasterTab") as! ConversationController
 //                self.navigationController?.pushViewController(mainVC, animated: true)
                 hud.dismiss()
             }
@@ -73,7 +75,7 @@ class LoginViewController: UIViewController {
     }
     
     func configureUI() {
-        login!.isEnabled = false
+//        login!.isEnabled = false
         navigationController?.navigationBar.isHidden = true
         navigationController?.navigationBar.barStyle = .black
         

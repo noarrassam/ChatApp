@@ -17,6 +17,8 @@ open class ATCUser: NSObject, ATCGenericBaseModel {
     var lastName: String?
     var profilePictureURL: String?
     var isOnline: Bool
+    
+    open override var description: String { "uid:\(uid ?? "") - username:\(username ?? "") - firstName: \(firstName ?? "") - lastname: \(lastName ?? "") - isOnline:\(isOnline)"  }
 
     public init(uid: String = "", firstName: String, lastName: String, avatarURL: String = "", email: String = "", isOnline: Bool = false) {
         self.firstName = firstName
@@ -26,8 +28,8 @@ open class ATCUser: NSObject, ATCGenericBaseModel {
         self.profilePictureURL = avatarURL
         self.isOnline = isOnline
     }
-
-    required public init(jsonDict: [String: Any]) {
+    
+    required public init(jsonDict: [String : Any]) {
         fatalError()
     }
 

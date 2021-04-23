@@ -106,6 +106,16 @@
 		156B014F262E36330038BD57 /* DashboardTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156B014E262E36330038BD57 /* DashboardTabBarController.swift */; };
 		2E3E82C2C29CCA759321A288 /* Pods_ChatApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FACAABDB7BB9861DD087760 /* Pods_ChatApp.framework */; };
 		AB5345577A207792312E077F /* Pods_ChatApp_ChatAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF51D4C8345E849A31763238 /* Pods_ChatApp_ChatAppUITests.framework */; };
+		BB204D6B2632212700DE5986 /* GradientBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB204D6A2632212700DE5986 /* GradientBackgroundView.swift */; };
+		BB204DA4263224B300DE5986 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB204DA3263224B300DE5986 /* ProfileViewController.swift */; };
+		BB204DA9263224E100DE5986 /* ProfileRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB204DA8263224E100DE5986 /* ProfileRowView.swift */; };
+		BB204DAE263224FF00DE5986 /* FillButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB204DAD263224FF00DE5986 /* FillButton.swift */; };
+		BB204DB82632254800DE5986 /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB204DB72632254800DE5986 /* UIViewControllerExtensions.swift */; };
+		BB204DC42632266A00DE5986 /* AccountInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB204DC32632266A00DE5986 /* AccountInfoViewController.swift */; };
+		BB204DC92632267700DE5986 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB204DC82632267700DE5986 /* SettingViewController.swift */; };
+		BB204DCE263226AC00DE5986 /* StepperRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB204DCD263226AC00DE5986 /* StepperRowView.swift */; };
+		BB204DD3263226C000DE5986 /* SwitchRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB204DD2263226C000DE5986 /* SwitchRowView.swift */; };
+		BB204DD826322E6200DE5986 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB204DD726322E6200DE5986 /* Service.swift */; };
 		E660C0EF2A999498B694E6F0 /* Pods_ChatAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7973375D70EB911D8CA10A6C /* Pods_ChatAppTests.framework */; };
 		F80320FB26250CB900286194 /* RegistrationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80320FA26250CB900286194 /* RegistrationViewModel.swift */; };
 		F803210826251A7F00286194 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F803210726251A7F00286194 /* GoogleService-Info.plist */; };
@@ -251,6 +261,16 @@
 		8CE4242B29418ECB695F353E /* Pods-ChatApp-ChatAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChatApp-ChatAppUITests.debug.xcconfig"; path = "Target Support Files/Pods-ChatApp-ChatAppUITests/Pods-ChatApp-ChatAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		8FACAABDB7BB9861DD087760 /* Pods_ChatApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChatApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF51D4C8345E849A31763238 /* Pods_ChatApp_ChatAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChatApp_ChatAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BB204D6A2632212700DE5986 /* GradientBackgroundView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientBackgroundView.swift; sourceTree = "<group>"; };
+		BB204DA3263224B300DE5986 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		BB204DA8263224E100DE5986 /* ProfileRowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileRowView.swift; sourceTree = "<group>"; };
+		BB204DAD263224FF00DE5986 /* FillButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FillButton.swift; sourceTree = "<group>"; };
+		BB204DB72632254800DE5986 /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
+		BB204DC32632266A00DE5986 /* AccountInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountInfoViewController.swift; sourceTree = "<group>"; };
+		BB204DC82632267700DE5986 /* SettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		BB204DCD263226AC00DE5986 /* StepperRowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StepperRowView.swift; sourceTree = "<group>"; };
+		BB204DD2263226C000DE5986 /* SwitchRowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwitchRowView.swift; sourceTree = "<group>"; };
+		BB204DD726322E6200DE5986 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		D62F946DA0208B739950C7CB /* Pods-ChatApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChatApp.release.xcconfig"; path = "Target Support Files/Pods-ChatApp/Pods-ChatApp.release.xcconfig"; sourceTree = "<group>"; };
 		F80320FA26250CB900286194 /* RegistrationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewModel.swift; sourceTree = "<group>"; };
 		F803210726251A7F00286194 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
@@ -610,6 +630,26 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		BB204D6F2632212C00DE5986 /* UIComponents */ = {
+			isa = PBXGroup;
+			children = (
+				BB204DD2263226C000DE5986 /* SwitchRowView.swift */,
+				BB204DCD263226AC00DE5986 /* StepperRowView.swift */,
+				BB204DA8263224E100DE5986 /* ProfileRowView.swift */,
+				BB204D6A2632212700DE5986 /* GradientBackgroundView.swift */,
+				BB204DAD263224FF00DE5986 /* FillButton.swift */,
+			);
+			path = UIComponents;
+			sourceTree = "<group>";
+		};
+		BB204DBF2632255600DE5986 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				BB204DB72632254800DE5986 /* UIViewControllerExtensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		F80320EB26250B1B00286194 /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
@@ -631,6 +671,7 @@
 			isa = PBXGroup;
 			children = (
 				F8C6FE802627401C001BF279 /* AuthService.swift */,
+				BB204DD726322E6200DE5986 /* Service.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -650,20 +691,6 @@
 				F80320EB26250B1B00286194 /* Authentication */,
 			);
 			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		F89BEF1B2623D8400038B92A /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		F89BEF1C2623D8420038B92A /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		F89BEF222623E3500038B92A /* Authentication */ = {
@@ -700,8 +727,6 @@
 			isa = PBXGroup;
 			children = (
 				156B006D262E28520038BD57 /* ChatAppsub */,
-				F89BEF1C2623D8420038B92A /* Model */,
-				F89BEF1B2623D8400038B92A /* View */,
 				F89BEF1A2623D8380038B92A /* ViewModel */,
 				F89BEF192623D8340038B92A /* Controller */,
 				F89BEF182623D8310038B92A /* API */,
@@ -711,6 +736,11 @@
 				F8FA715D2607A1150051F286 /* SceneDelegate.swift */,
 				F8FA715F2607A1150051F286 /* ViewController.swift */,
 				F8FA71612607A1150051F286 /* Main.storyboard */,
+				BB204DA3263224B300DE5986 /* ProfileViewController.swift */,
+				BB204DC82632267700DE5986 /* SettingViewController.swift */,
+				BB204DC32632266A00DE5986 /* AccountInfoViewController.swift */,
+				BB204D6F2632212C00DE5986 /* UIComponents */,
+				BB204DBF2632255600DE5986 /* Extensions */,
 				156B014E262E36330038BD57 /* DashboardTabBarController.swift */,
 				F8FA71672607A1160051F286 /* Assets.xcassets */,
 				F8FA71692607A1160051F286 /* LaunchScreen.storyboard */,
@@ -994,15 +1024,18 @@
 				156B0139262E28530038BD57 /* ConstraintConstantTarget.swift in Sources */,
 				156B0131262E28530038BD57 /* ConstraintPriority.swift in Sources */,
 				156B00ED262E28530038BD57 /* ATCChatChannel.swift in Sources */,
+				BB204DC92632267700DE5986 /* SettingViewController.swift in Sources */,
 				156B00F3262E28530038BD57 /* ATCChatThreadsViewController.swift in Sources */,
 				156B0127262E28530038BD57 /* LayoutConstraintItem.swift in Sources */,
 				156B0124262E28530038BD57 /* ATCGenericFirebaseDataSource.swift in Sources */,
+				BB204DA4263224B300DE5986 /* ProfileViewController.swift in Sources */,
 				156B010B262E28530038BD57 /* ATCMenuTableViewController.swift in Sources */,
 				156B0147262E28530038BD57 /* ConstraintMakerRelatable.swift in Sources */,
 				156B0125262E28530038BD57 /* UIImage+ATCAdditions.swift in Sources */,
 				156B0111262E28530038BD57 /* ATCCollectionViewFlowLayout.swift in Sources */,
 				156B00EC262E28530038BD57 /* ATCUser.swift in Sources */,
 				156B012F262E28530038BD57 /* ConstraintDSL.swift in Sources */,
+				BB204DD826322E6200DE5986 /* Service.swift in Sources */,
 				156B0121262E28530038BD57 /* ATCUIGenericConfigurationProtocol.swift in Sources */,
 				156B010D262E28530038BD57 /* ATCMenuHeaderTableViewCell.swift in Sources */,
 				156B0137262E28530038BD57 /* ConstraintLayoutSupport.swift in Sources */,
@@ -1013,8 +1046,10 @@
 				156B0143262E28530038BD57 /* ConstraintRelatableTarget.swift in Sources */,
 				156B0101262E28530038BD57 /* ATCStoryAdapter.swift in Sources */,
 				156B0133262E28530038BD57 /* ConstraintConfig.swift in Sources */,
+				BB204DC42632266A00DE5986 /* AccountInfoViewController.swift in Sources */,
 				156B011F262E28530038BD57 /* ATCGenericLocalHeteroDataSource.swift in Sources */,
 				156B012A262E28530038BD57 /* ConstraintAttributes.swift in Sources */,
+				BB204D6B2632212700DE5986 /* GradientBackgroundView.swift in Sources */,
 				156B0105262E28530038BD57 /* ATCHostViewController.swift in Sources */,
 				156B00FC262E28530038BD57 /* UIView.swift in Sources */,
 				F82774E22627C5E1006D6BF3 /* ForgotPasswordController.swift in Sources */,
@@ -1041,6 +1076,7 @@
 				156B0130262E28530038BD57 /* ConstraintMakerExtendable.swift in Sources */,
 				156B011B262E28530038BD57 /* ATCCarouselCollectionViewCell.swift in Sources */,
 				F8FA71662607A1150051F286 /* ChatApp.xcdatamodeld in Sources */,
+				BB204DB82632254800DE5986 /* UIViewControllerExtensions.swift in Sources */,
 				156B011A262E28530038BD57 /* ATCMessengerUserAdapter.swift in Sources */,
 				156B012D262E28530038BD57 /* ConstraintInsets.swift in Sources */,
 				156B0120262E28530038BD57 /* ATCGenericLocalDataSource.swift in Sources */,
@@ -1069,8 +1105,10 @@
 				156B0115262E28530038BD57 /* ATCViewControllerContainerCollectionViewCell.swift in Sources */,
 				F89BEF1E2623D8A80038B92A /* ConversationsController.swift in Sources */,
 				156B00FA262E28530038BD57 /* UIScrollView.swift in Sources */,
+				BB204DD3263226C000DE5986 /* SwitchRowView.swift in Sources */,
 				156B0129262E28530038BD57 /* ConstraintMakerPriortizable.swift in Sources */,
 				156B00EE262E28530038BD57 /* ATChatMessage.swift in Sources */,
+				BB204DAE263224FF00DE5986 /* FillButton.swift in Sources */,
 				156B0132262E28530038BD57 /* ConstraintInsetTarget.swift in Sources */,
 				156B00FB262E28530038BD57 /* Date.swift in Sources */,
 				156B0145262E28530038BD57 /* ConstraintLayoutGuide+Extensions.swift in Sources */,
@@ -1080,10 +1118,12 @@
 				156B00F8262E28530038BD57 /* ATCChatMockStore.swift in Sources */,
 				156B00EA262E28530038BD57 /* ChatHostViewController.swift in Sources */,
 				156B0142262E28530038BD57 /* Debugging.swift in Sources */,
+				BB204DCE263226AC00DE5986 /* StepperRowView.swift in Sources */,
 				156B0144262E28530038BD57 /* LayoutConstraint.swift in Sources */,
 				156B00FF262E28530038BD57 /* String.swift in Sources */,
 				156B012C262E28530038BD57 /* ConstraintPriorityTarget.swift in Sources */,
 				156B0106262E28530038BD57 /* ATCNavigationController.swift in Sources */,
+				BB204DA9263224E100DE5986 /* ProfileRowView.swift in Sources */,
 				156B013A262E28530038BD57 /* ConstraintOffsetTarget.swift in Sources */,
 				156B0123262E28530038BD57 /* TimeFormatHelper.swift in Sources */,
 				156B0103262E28530038BD57 /* ATCCarouselAdapter.swift in Sources */,

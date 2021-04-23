@@ -13,6 +13,11 @@ class ConversationController: UIViewController, UITableViewDelegate, UITableView
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return channels.count
     }
+    @IBOutlet weak var profileButton: UIButton!
+    
+    @IBAction func profileButtonDidTouch() {
+        performSegue(withIdentifier: "ProfileSegue", sender: nil)
+    }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "channelCell", for: indexPath) as! UITableViewCell
