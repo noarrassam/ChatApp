@@ -30,7 +30,7 @@ class ViewController: UIViewController {
     @objc func didTapButton() {
         button.startAnimation()
         
-//        DispatchQueue.main.asyncAfter(deadline: .now()+3){
+        DispatchQueue.main.asyncAfter(deadline: .now()+3){
             self.button.stopAnimation(animationStyle: .expand, revertAfterDelay: 1)
             
             let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
@@ -38,5 +38,5 @@ class ViewController: UIViewController {
             let nextViewController = storyBoard.instantiateViewController(withIdentifier: "nextView") as! LoginViewController
             self.present(nextViewController, animated:true)
         }
-//    }
+    }
 }

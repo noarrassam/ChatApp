@@ -18,14 +18,6 @@ class RegistrationController: UIViewController {
     @IBOutlet weak var signUp: UIButton!
     @IBOutlet weak var plusBtn: UIButton!
     
-//    private let plusPhotoButton: UIButton = {
-//        let button = UIButton(type: .system)
-//        button.setImage(#imageLiteral(resourceName: "plusPhoto2X"), for: .normal)
-//        button.tintColor = .white
-//        button.addTarget(self, action: #selector(handleSelectPhoto), for: .touchUpInside)
-//        button.clipsToBounds = true
-//        return button
-//    }()
     
     private var viewModel = RegistrationViewModel()
     private var profileImage: UIImage?
@@ -99,10 +91,18 @@ class RegistrationController: UIViewController {
             if let error = error {
                 print("DEBUG: \(error.localizedDescription)")
                 self.showLoader(false)
+//                let actionSheet = UIAlertController(title: "Check Your Email", message: "Email Verification has been Sent", preferredStyle: .alert)
+//                actionSheet.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+//                //actionSheet.show(, sender: <#T##Any?#>)
+//                self.present(actionSheet, animated: true, completion: nil)
                 return
             }
             self.showLoader(false)
-            self.dismiss(animated: true, completion: nil)
+            let actionSheet = UIAlertController(title: "Check Your Email", message: "Email Verification has been Sent", preferredStyle: .alert)
+            actionSheet.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: {_ in self.dismiss(animated: true, completion: nil)}))
+            //actionSheet.show(, sender: <#T##Any?#>)
+            self.present(actionSheet, animated: true, completion: nil)
+            
         }
     }
     
@@ -113,17 +113,10 @@ class RegistrationController: UIViewController {
     
     func configureUI() {
         signUp.isEnabled = false
-        //view.addSubview(plusPhotoButton)
-        //plusPhotoButton.centerX(inView: view)
-        
-        //plusBtn.translatesAutoresizingMaskIntoConstraints = false
-        //plusPhotoButton.center = view.center
         plusBtn.frame.size = CGSize(width: 120, height: 120)
-        //plusBtn.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor).isActive = true
         plusBtn.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor).isActive = true
         plusBtn.widthAnchor.constraint(equalToConstant: 120).isActive = true
         plusBtn.heightAnchor.constraint(equalToConstant: 120).isActive = true
-        //plusBtn.layoutMargins = UIEdgeInsets(top: 20, left: 0, bottom: 0, right: 0)
         plusBtn.addTarget(self, action: #selector(handleSelectPhoto), for: .touchUpInside)
     }
     
