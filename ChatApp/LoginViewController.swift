@@ -41,7 +41,6 @@ class LoginViewController: UIViewController {
     
     @objc func handleLogin() {
         
-        email.text = "n@g.com"
         guard let email = email.text else {return}
         guard let password = pass.text else {return}
         
