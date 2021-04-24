@@ -604,7 +604,7 @@
             </objects>
             <point key="canvasLocation" x="575" y="858"/>
         </scene>
-        <!--Item-->
+        <!--Conversation Controller-->
         <scene sceneID="oX0-6S-mmp">
             <objects>
                 <viewController storyboardIdentifier="tabVC" id="cyO-ne-gtX" customClass="ConversationController" customModule="ChatApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -670,7 +670,6 @@
                             <constraint firstItem="1Qd-h1-Anb" firstAttribute="leading" secondItem="c7B-tc-49U" secondAttribute="leading" id="zZB-jP-uew"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="eFA-Cr-M4E"/>
                     <navigationItem key="navigationItem" id="Wi6-bS-5NU"/>
                     <connections>
                         <outlet property="profileButton" destination="5CQ-VN-ftM" id="Tzf-9P-8Ps"/>
@@ -680,7 +679,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e1i-0P-Z3n" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2110" y="133"/>
+            <point key="canvasLocation" x="3009.8130841121492" y="132.82937365010801"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="aMO-W6-frI">
@@ -746,7 +745,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aZp-nT-Fc1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3265" y="135"/>
+            <point key="canvasLocation" x="4164.9532710280373" y="134.77321814254861"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Y03-0I-hU9">
@@ -839,7 +838,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kxn-CS-GkF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4103" y="134"/>
+            <point key="canvasLocation" x="5001.8691588785041" y="133.47732181425488"/>
         </scene>
         <!--Profile View Controller-->
         <scene sceneID="RvR-9h-QPm">
@@ -963,7 +962,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v0j-Re-Aw6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2815" y="825"/>
+            <point key="canvasLocation" x="3010" y="858"/>
         </scene>
         <!--Account Info View Controller-->
         <scene sceneID="kpH-e0-b1n">
@@ -1132,7 +1131,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xgT-Bg-NmK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2142" y="826"/>
+            <point key="canvasLocation" x="2141" y="858"/>
         </scene>
     </scenes>
     <designables>

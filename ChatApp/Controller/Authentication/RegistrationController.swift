@@ -91,23 +91,17 @@ class RegistrationController: UIViewController {
             if let error = error {
                 print("DEBUG: \(error.localizedDescription)")
                 self.showLoader(false)
-//                let actionSheet = UIAlertController(title: "Check Your Email", message: "Email Verification has been Sent", preferredStyle: .alert)
-//                actionSheet.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
-//                //actionSheet.show(, sender: <#T##Any?#>)
-//                self.present(actionSheet, animated: true, completion: nil)
                 return
             }
             self.showLoader(false)
             let actionSheet = UIAlertController(title: "Check Your Email", message: "Email Verification has been Sent", preferredStyle: .alert)
             actionSheet.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: {_ in self.dismiss(animated: true, completion: nil)}))
-            //actionSheet.show(, sender: <#T##Any?#>)
             self.present(actionSheet, animated: true, completion: nil)
             
         }
     }
     
     @IBAction func SIgnUp(_ sender: Any) {
-//        signUp.addTarget(self, action: #selector(handleRegistration), for: .touchUpInside)
         handleRegistration()
     }
     

@@ -48,8 +48,6 @@ class LoginViewController: UIViewController {
         hud.textLabel.text = "Logging in"
         hud.show(in: view)
         
-        
-        
         AuthService.shared.logUserIn(withEmail: email, password: password) { (result, error) in
             if let error = error {
                 print("DEBUG: Failed to login with error \(error.localizedDescription)")
@@ -57,12 +55,10 @@ class LoginViewController: UIViewController {
                 return
             } else if let isLoggedIn = result as? Bool, isLoggedIn == true {
                 let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-                let newViewController = storyBoard.instantiateViewController(withIdentifier: "tabVC")
+                let newViewController = storyBoard.instantiateViewController(withIdentifier: "tabVC") as! ConversationController
                 self.present(newViewController, animated: true, completion: nil)
-
-           
-                
                 hud.dismiss()
+                
             } else {
                 
                 print("Show alert to user saying please verify email!")
@@ -78,7 +74,7 @@ class LoginViewController: UIViewController {
     }
     
     func configureUI() {
-//        login!.isEnabled = false
+        login!.isEnabled = false
         navigationController?.navigationBar.isHidden = true
         navigationController?.navigationBar.barStyle = .black
         

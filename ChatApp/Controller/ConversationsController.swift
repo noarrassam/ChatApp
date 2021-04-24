@@ -111,7 +111,7 @@ class ConversationController: UIViewController, UITableViewDelegate, UITableView
         if Auth.auth().currentUser?.uid == nil {
             presentLoginScreen()
         }else{
-            print("DEBUG: User is not logged in. Configure controller..")
+            print("DEBUG: User is logged in. Configure controller.. \(Auth.auth().currentUser?.uid)")
         }
     }
     

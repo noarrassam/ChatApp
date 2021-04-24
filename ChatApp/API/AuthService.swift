@@ -20,20 +20,32 @@ struct RegistrationCredentials {
 struct AuthService {
     static let shared = AuthService()
     
-    
     func logUserIn(withEmail email: String, password: String, completion: @escaping (_ response: Any?, _ error: Error?) -> Void) {
         guard let user = Auth.auth().currentUser else {
-            return logUserIn(withEmail: email, password: password, completion: completion)
+            Auth.auth().signIn(withEmail: email, password: password) { (result, error) in
+                if Auth.auth().currentUser != nil {
+                    //print("DEBUG: User is just logged in  \(Auth.auth().currentUser?.uid)")
+                   logUserIn(withEmail: email, password: password, completion: completion)
+                }else{
+                    completion(false, error)
+                }
+            }
+                return
         }
         
+        //print("DEBUG: User logged in  \(Auth.auth().currentUser?.uid)")
+
         user.reload { (error) in
             switch user.isEmailVerified {
             case true:
                 print("users email is verified")
                 Auth.auth().signIn(withEmail: email, password: password) { (result, error) in
-                    completion(true, nil)
+                    if result != nil {
+                        completion(true, nil)
+                    }else{
+                        completion(false, nil)
+                    }
                 }
-//                Auth.auth().signIn(withEmail: email, password: password, completion: completion)
                 
             case false:
                 user.sendEmailVerification { (error) in
@@ -41,7 +53,6 @@ struct AuthService {
                     guard let error = error else {
                         completion(false, nil)
                         return print("user email verification sent")
-                        
                     }
                     
                     self.handleError(error: error)
@@ -49,8 +60,6 @@ struct AuthService {
                 }
             
                 print("verify it now")
-                
-            
             }
         }
     }
@@ -72,13 +81,7 @@ struct AuthService {
     public func sendVerificationMail() {
         if self.authUser != nil && !self.authUser!.isEmailVerified {
             self.authUser!.sendEmailVerification(completion: { (error) in
-//                let actionSheet = UIAlertController(title: "Check Your Email", message: "Email Verification has been Sent", preferredStyle: .actionSheet)
-//                actionSheet.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
-//                //actionSheet.show(, sender: <#T##Any?#>)
-//                //present(actionSheet, animated: true, completion: nil)
-
             })
-            
         }
         else {
             // Either the user is not available, or the user is already verified.

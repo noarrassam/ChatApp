@@ -26,9 +26,9 @@ target 'ChatApp' do
   pod 'JGProgressHUD','~>2.0.3'	
   pod 'MessageKit'
 
-  pod 'FacebookCore'
-  pod 'FacebookLogin'
-  pod 'FacebookShare'
+  pod 'FBSDKCoreKit'
+  pod 'FBSDKLoginKit'
+  pod 'FBSDKShareKit'
   pod 'Firebase/Database'
   pod 'Alamofire'
   pod 'Kingfisher'
