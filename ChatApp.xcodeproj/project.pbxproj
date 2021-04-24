@@ -112,7 +112,7 @@
 		BB204DAE263224FF00DE5986 /* FillButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB204DAD263224FF00DE5986 /* FillButton.swift */; };
 		BB204DB82632254800DE5986 /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB204DB72632254800DE5986 /* UIViewControllerExtensions.swift */; };
 		BB204DC42632266A00DE5986 /* AccountInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB204DC32632266A00DE5986 /* AccountInfoViewController.swift */; };
-		BB204DC92632267700DE5986 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB204DC82632267700DE5986 /* SettingViewController.swift */; };
+		BB204DC92632267700DE5986 /* SettingCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB204DC82632267700DE5986 /* SettingCollectionViewController.swift */; };
 		BB204DCE263226AC00DE5986 /* StepperRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB204DCD263226AC00DE5986 /* StepperRowView.swift */; };
 		BB204DD3263226C000DE5986 /* SwitchRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB204DD2263226C000DE5986 /* SwitchRowView.swift */; };
 		BB204DD826322E6200DE5986 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB204DD726322E6200DE5986 /* Service.swift */; };
@@ -267,7 +267,7 @@
 		BB204DAD263224FF00DE5986 /* FillButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FillButton.swift; sourceTree = "<group>"; };
 		BB204DB72632254800DE5986 /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
 		BB204DC32632266A00DE5986 /* AccountInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountInfoViewController.swift; sourceTree = "<group>"; };
-		BB204DC82632267700DE5986 /* SettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		BB204DC82632267700DE5986 /* SettingCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingCollectionViewController.swift; sourceTree = "<group>"; };
 		BB204DCD263226AC00DE5986 /* StepperRowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StepperRowView.swift; sourceTree = "<group>"; };
 		BB204DD2263226C000DE5986 /* SwitchRowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwitchRowView.swift; sourceTree = "<group>"; };
 		BB204DD726322E6200DE5986 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
@@ -737,7 +737,7 @@
 				F8FA715F2607A1150051F286 /* ViewController.swift */,
 				F8FA71612607A1150051F286 /* Main.storyboard */,
 				BB204DA3263224B300DE5986 /* ProfileViewController.swift */,
-				BB204DC82632267700DE5986 /* SettingViewController.swift */,
+				BB204DC82632267700DE5986 /* SettingCollectionViewController.swift */,
 				BB204DC32632266A00DE5986 /* AccountInfoViewController.swift */,
 				BB204D6F2632212C00DE5986 /* UIComponents */,
 				BB204DBF2632255600DE5986 /* Extensions */,
@@ -1024,7 +1024,7 @@
 				156B0139262E28530038BD57 /* ConstraintConstantTarget.swift in Sources */,
 				156B0131262E28530038BD57 /* ConstraintPriority.swift in Sources */,
 				156B00ED262E28530038BD57 /* ATCChatChannel.swift in Sources */,
-				BB204DC92632267700DE5986 /* SettingViewController.swift in Sources */,
+				BB204DC92632267700DE5986 /* SettingCollectionViewController.swift in Sources */,
 				156B00F3262E28530038BD57 /* ATCChatThreadsViewController.swift in Sources */,
 				156B0127262E28530038BD57 /* LayoutConstraintItem.swift in Sources */,
 				156B0124262E28530038BD57 /* ATCGenericFirebaseDataSource.swift in Sources */,

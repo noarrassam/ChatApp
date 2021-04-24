@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import JGProgressHUD
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
@@ -18,10 +19,34 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let _ = (scene as? UIWindowScene) else { return }
         
-//        window = UIWindow(windowScene: scene as! UIWindowScene)
-//        let nav = UINavigationController(rootViewController: ConversationController())
-//        window?.rootViewController = nav
-//        window?.makeKeyAndVisible()
+
+        autoLoginHandler()
+    }
+    
+    private func autoLoginHandler() {
+        if let rootController = window?.rootViewController, Service.shared.isAutoLoginEnabled {
+            let hud = JGProgressHUD(style: .dark)
+            hud.textLabel.text = "Logging in"
+            hud.show(in: rootController.view)
+            
+            AuthService.shared.logUserIn(withEmail: Service.shared.storedCredential.email, password: Service.shared.storedCredential.password) { (result, error) in
+                if let error = error {
+                    print("DEBUG: Failed to login with error \(error.localizedDescription)")
+                    hud.dismiss()
+                    return
+                } else if let isLoggedIn = result as? Bool, isLoggedIn == true {
+                    let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                    let newViewController = storyBoard.instantiateViewController(withIdentifier: "tabVC") as! ConversationController
+                    rootController.present(newViewController, animated: true, completion: nil)
+                    hud.dismiss()
+                    
+                } else {
+                    
+                    print("Show alert to user saying please verify email!")
+                    hud.dismiss()
+                }
+            }
+        }
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

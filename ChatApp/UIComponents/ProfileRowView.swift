@@ -31,6 +31,12 @@ class ProfileRowView: UIView {
             disclosureImageView.image = trailingImage
         }
     }
+    
+    var fontSize: CGFloat = 12 {
+        didSet {
+            leadingLabel.font = .systemFont(ofSize: fontSize)
+        }
+    }
 
     private let leadingImageView = UIImageView()
     private let leadingLabel = UILabel()

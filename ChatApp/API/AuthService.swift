@@ -41,6 +41,7 @@ struct AuthService {
                 print("users email is verified")
                 Auth.auth().signIn(withEmail: email, password: password) { (result, error) in
                     if result != nil {
+                        Service.shared.storedCredential = (email, password)
                         completion(true, nil)
                     }else{
                         completion(false, nil)

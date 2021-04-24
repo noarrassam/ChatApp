@@ -33,7 +33,7 @@ class ProfileViewController: UIViewController {
         }
         
         settingRowView.action = { [weak self] in
-            if let settingViewController = self?.view.window?.rootViewController?.storyboard?.instantiateViewController(identifier: "SettingViewController") {
+            if let settingViewController = self?.view.window?.rootViewController?.storyboard?.instantiateViewController(identifier: "SettingCollectionViewController") {
                 self?.navigationController?.pushViewController(settingViewController, animated: true)
             }
         }

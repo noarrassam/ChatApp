@@ -357,6 +357,7 @@ extension ATCChatThreadViewController: MessagesDisplayDelegate {
   }
   
   func configureAvatarView(_ avatarView: AvatarView, for message: MessageType, at indexPath: IndexPath, in messagesCollectionView: MessagesCollectionView) {
+    guard !Service.shared.isAvatarShowEnabled else { avatarView.frame.size.width = .zero; return }
     if let message = message as? ATChatMessage {
       avatarView.initials = message.atcSender.initials
       if let urlString = message.atcSender.profilePictureURL {

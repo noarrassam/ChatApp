@@ -37,6 +37,33 @@ class Service {
             users(items)
         }
     }
+    
+    var isAutoLoginEnabled: Bool {
+        get {
+            UserDefaults.standard.bool(forKey: "AutoLogin")
+        }
+        set {
+            UserDefaults.standard.setValue(newValue, forKey: "AutoLogin")
+        }
+    }
+    
+    var isAvatarShowEnabled: Bool {
+        get { UserDefaults.standard.bool(forKey: "AvatarShowEnabled") }
+        set { UserDefaults.standard.setValue(newValue, forKey: "AvatarShowEnabled")  }
+    }
+    
+    var storedCredential: (email: String, password: String) {
+        get {
+            let email = UserDefaults.standard.string(forKey: "Email") ?? ""
+            let password = UserDefaults.standard.string(forKey: "Password") ?? ""
+            return (email, password)
+        }
+        set {
+            UserDefaults.standard.setValue(newValue.email, forKey: "Email")
+            UserDefaults.standard.setValue(newValue.password, forKey: "Password")
+        }
+    }
+    
 }
 
 extension Service {
