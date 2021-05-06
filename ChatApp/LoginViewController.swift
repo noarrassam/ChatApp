@@ -30,6 +30,7 @@ class LoginViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    // Post a notification when the text changes, and forwards the message to the text field’s cell if it responds.
     @objc func textDidChange(sender: UITextField){
         if sender == email {
             viewModel.email = sender.text
@@ -48,11 +49,14 @@ class LoginViewController: UIViewController {
         hud.textLabel.text = "Logging in"
         hud.show(in: view)
         
+        // Getting an instance of AuhSerivce to login
         AuthService.shared.logUserIn(withEmail: email, password: password) { (result, error) in
             if let error = error {
                 print("DEBUG: Failed to login with error \(error.localizedDescription)")
                 hud.dismiss()
                 return
+                
+            // if login is correct the ConversationController will prompt
             } else if let isLoggedIn = result as? Bool, isLoggedIn == true {
                 let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
                 let newViewController = storyBoard.instantiateViewController(withIdentifier: "tabVC") as! ConversationController
@@ -83,6 +87,7 @@ class LoginViewController: UIViewController {
     }
 }
 
+// Form Validation
 extension LoginViewController: AuthenticiationControllerProtocol {
     func checkFormStatus() {
         if viewModel.formIsValid {

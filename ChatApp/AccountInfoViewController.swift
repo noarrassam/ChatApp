@@ -24,6 +24,7 @@ class AccountInfoViewController: UIViewController {
         setUserDetailOnView()
     }
     
+    // Set User Details
     private func setUserDetailOnView() {
         guard let user = user, let profileImage = user.profilePictureURL else { return }
         emailValueLabel.text = user.email

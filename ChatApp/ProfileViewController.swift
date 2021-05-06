@@ -21,6 +21,7 @@ class ProfileViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        // Setting profile image constraints
         profileImageView.layer.borderWidth = 2
         profileImageView.layer.borderColor = UIColor.white.cgColor
         headerView.colors = [#colorLiteral(red: 0.4039215686, green: 0.7294117647, blue: 0.9294117647, alpha: 1), #colorLiteral(red: 0.5019607843, green: 0.5019607843, blue: 0.5019607843, alpha: 1)]
@@ -32,6 +33,7 @@ class ProfileViewController: UIViewController {
             }
         }
         
+        // Navigating to SettingCollectionViewController if true
         settingRowView.action = { [weak self] in
             if let settingViewController = self?.view.window?.rootViewController?.storyboard?.instantiateViewController(identifier: "SettingCollectionViewController") {
                 self?.navigationController?.pushViewController(settingViewController, animated: true)
@@ -41,6 +43,7 @@ class ProfileViewController: UIViewController {
         setUser()
     }
     
+    // Fetchig user info.
     private func setUser() {
         Service.shared.fetchUsers(type: .currentUser) { users in
             guard let currentUser = users.first else { return }
@@ -66,6 +69,7 @@ class ProfileViewController: UIViewController {
         dismiss(animated: true)
     }
     
+    // Logout Functionality
     @IBAction func logoutButtonDidTouch(_ sender: FillButton) {
         let actionSheet = UIAlertController(title: "Log Out", message: "Are you sure you want to logout?", preferredStyle: .actionSheet)
         

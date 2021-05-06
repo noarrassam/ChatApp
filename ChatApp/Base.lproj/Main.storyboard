@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="qAw-ag-VgJ">
     <device id="retina6_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
@@ -12,17 +12,11 @@
         <!--View Controller-->
         <scene sceneID="hwS-6k-3Pp">
             <objects>
-                <viewController storyboardIdentifier="Main" id="2Dx-Mt-ilK" customClass="ViewController" customModule="ChatApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Main" id="2Dx-Mt-ilK" customClass="ViewController" customModule="ChatTeam" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="UgC-e0-DsC">
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="dXD-rp-Z3z">
-                                <rect key="frame" x="71.333333333333343" y="108" width="285.33333333333326" height="100.66666666666669"/>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Decoration" translatesAutoresizingMaskIntoConstraints="NO" id="QGW-PY-UUG">
-                                <rect key="frame" x="71.333333333333343" y="312.33333333333337" width="285.33333333333326" height="301.33333333333337"/>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k6l-6N-4l4">
                                 <rect key="frame" x="167" y="850" width="94" height="22"/>
                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="8"/>
@@ -33,27 +27,24 @@
                                     <segue destination="idp-Qn-Ohs" kind="presentation" id="0aW-Ee-xDR"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="chatImg" translatesAutoresizingMaskIntoConstraints="NO" id="uSi-Ec-P4G">
+                                <rect key="frame" x="94" y="203" width="240" height="128"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="GCz-4G-fdj"/>
                         <color key="backgroundColor" red="0.36632746459999999" green="0.78049713369999996" blue="0.98042160270000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="k6l-6N-4l4" firstAttribute="bottom" secondItem="GCz-4G-fdj" secondAttribute="bottom" constant="-20" id="7ij-1x-tdk"/>
-                            <constraint firstItem="QGW-PY-UUG" firstAttribute="height" secondItem="dXD-rp-Z3z" secondAttribute="height" multiplier="3:1" id="8Kl-av-m0M"/>
-                            <constraint firstItem="dXD-rp-Z3z" firstAttribute="centerX" secondItem="UgC-e0-DsC" secondAttribute="centerX" id="8Yk-Pl-ijD"/>
-                            <constraint firstItem="QGW-PY-UUG" firstAttribute="centerX" secondItem="UgC-e0-DsC" secondAttribute="centerX" id="Bfv-rw-Bj9"/>
-                            <constraint firstItem="dXD-rp-Z3z" firstAttribute="width" secondItem="GCz-4G-fdj" secondAttribute="width" multiplier="2:3" id="OE2-FU-fbM"/>
-                            <constraint firstItem="QGW-PY-UUG" firstAttribute="centerY" secondItem="UgC-e0-DsC" secondAttribute="centerY" id="OrS-Fb-i0x"/>
+                            <constraint firstItem="uSi-Ec-P4G" firstAttribute="centerX" secondItem="UgC-e0-DsC" secondAttribute="centerX" id="Nd1-ed-7p8"/>
                             <constraint firstItem="k6l-6N-4l4" firstAttribute="centerX" secondItem="UgC-e0-DsC" secondAttribute="centerX" id="Y8V-Ia-0xf"/>
-                            <constraint firstItem="dXD-rp-Z3z" firstAttribute="height" secondItem="GCz-4G-fdj" secondAttribute="height" multiplier="1:8" id="bur-tP-ev6"/>
-                            <constraint firstItem="dXD-rp-Z3z" firstAttribute="top" secondItem="GCz-4G-fdj" secondAttribute="top" constant="20" id="o3H-RH-A8Z"/>
-                            <constraint firstItem="QGW-PY-UUG" firstAttribute="width" secondItem="dXD-rp-Z3z" secondAttribute="width" id="ud0-Xi-TBL"/>
+                            <constraint firstItem="uSi-Ec-P4G" firstAttribute="centerY" secondItem="UgC-e0-DsC" secondAttribute="centerY" constant="-196" id="oR5-IO-Ta7"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="jFr-gD-ruD"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wtr-Wl-4VU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-800.46728971962614" y="134.12526997840175"/>
+            <point key="canvasLocation" x="-1235" y="135"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="4Mt-eV-OYD">
@@ -69,28 +60,28 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yJ6-lR-1yF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1694" y="135"/>
+            <point key="canvasLocation" x="-2136" y="135"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="nextView" id="BYZ-38-t0r" customClass="LoginViewController" customModule="ChatApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="nextView" id="BYZ-38-t0r" customClass="LoginViewController" customModule="ChatTeam" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="872"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chatImg" highlighted="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Q7h-KT-XXt">
-                                <rect key="frame" x="158.66666666666666" y="148.66666666666666" width="110.99999999999997" height="103"/>
+                                <rect key="frame" x="158.66666666666666" y="121.66666666666669" width="110.99999999999997" height="103"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7C6-jR-h7Y">
-                                <rect key="frame" x="282" y="566" width="97" height="22"/>
+                                <rect key="frame" x="282" y="539" width="97" height="22"/>
                                 <state key="normal" image="forgotPassword"/>
                                 <connections>
                                     <segue destination="jg9-IY-NzE" kind="show" id="FYj-FT-5T2"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8dl-eT-6sH">
-                                <rect key="frame" x="47.666666666666657" y="644" width="335" height="52"/>
+                                <rect key="frame" x="47.666666666666657" y="617" width="335" height="52"/>
                                 <state key="normal" image="loginBtn"/>
                                 <connections>
                                     <action selector="Login:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iBs-fj-tc3"/>
@@ -107,7 +98,7 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter Your Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QPE-eV-Okk" customClass="HoshiTextField" customModule="TextFieldEffects">
-                                <rect key="frame" x="59" y="459" width="320" height="61"/>
+                                <rect key="frame" x="59" y="432" width="320" height="61"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="320" id="03N-PM-qZj"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="320" id="JQK-rd-dhy"/>
@@ -135,7 +126,7 @@
                                 <rect key="frame" x="37" y="458" width="28" height="33"/>
                             </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter Your Email Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AMg-3x-ZDH" customClass="HoshiTextField" customModule="TextFieldEffects">
-                                <rect key="frame" x="59" y="265" width="320" height="61"/>
+                                <rect key="frame" x="59" y="221" width="320" height="61"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="320" id="SKB-D3-zoL"/>
                                     <constraint firstAttribute="height" constant="61" id="alD-mb-FFf"/>
@@ -189,12 +180,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="152.803738317757" y="134.12526997840175"/>
+            <point key="canvasLocation" x="-245" y="135"/>
         </scene>
-        <!--View Controller-->
+        <!--Terms View Controller-->
         <scene sceneID="ypW-us-y3w">
             <objects>
-                <viewController id="idp-Qn-Ohs" sceneMemberID="viewController">
+                <viewController id="idp-Qn-Ohs" customClass="TermsViewController" customModule="ChatTeam" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="FeX-Cx-kkN">
                         <rect key="frame" x="0.0" y="0.0" width="428" height="872"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -211,17 +202,25 @@
                                 <state key="normal" title="I Agree" backgroundImage="eventnametextbox">
                                     <color key="titleColor" systemColor="systemTealColor"/>
                                 </state>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="CpY-Ee-cRt"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UKT-JE-7lY">
-                                <rect key="frame" x="71.333333333333343" y="786" width="285.33333333333326" height="42"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UKT-JE-7lY">
+                                <rect key="frame" x="71.333333333333371" y="750" width="285.33333333333326" height="42"/>
                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="14"/>
                                 <state key="normal" title="Disagree">
                                     <color key="titleColor" systemColor="systemTealColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="dismiss:" destination="idp-Qn-Ohs" eventType="touchUpInside" id="bwO-K8-OEs"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DmL-rj-nNK">
                                 <rect key="frame" x="10" y="217.66666666666666" width="408" height="436.66666666666674"/>
-                                <string key="text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic </string>
+                                <string key="text">The Chat Center service is only available to persons 13 years or older. By agreeing to these terms of service you are stating that you are at least 13 years old.
+
+The Chat Center Service allows you to create, access, view and store / share multimedia messages for yourself, with your friends or the public through our mobile apps and our website . As long as you comply with these Terms, you have the right to download and install a copy of the App to your mobile device, and to access and use the Service, for your own personal use. Chat Center gives you a personal, worldwide, royalty-free, non-assignable and non-exclusive license to use the software provided to you by Chat Center.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.016664370894432068" green="0.94279855489730835" blue="0.99247938394546509" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -230,8 +229,7 @@
                         <viewLayoutGuide key="safeArea" id="3nv-KQ-Jtw"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="UKT-JE-7lY" firstAttribute="width" secondItem="08Y-Rm-oQ0" secondAttribute="width" id="05L-Eh-qi3"/>
-                            <constraint firstItem="UKT-JE-7lY" firstAttribute="height" secondItem="08Y-Rm-oQ0" secondAttribute="height" multiplier="1:2" id="5Xa-I9-Mez"/>
+                            <constraint firstItem="UKT-JE-7lY" firstAttribute="centerX" secondItem="FeX-Cx-kkN" secondAttribute="centerX" id="2EV-oo-isa"/>
                             <constraint firstItem="oPk-fr-bho" firstAttribute="width" secondItem="3nv-KQ-Jtw" secondAttribute="width" multiplier="2:3" id="8St-TD-VrZ"/>
                             <constraint firstItem="oPk-fr-bho" firstAttribute="height" secondItem="3nv-KQ-Jtw" secondAttribute="height" multiplier="1:10" id="BLz-Bj-3l4"/>
                             <constraint firstItem="DmL-rj-nNK" firstAttribute="leading" secondItem="FeX-Cx-kkN" secondAttribute="leading" constant="10" id="GvY-BT-oUl"/>
@@ -239,14 +237,13 @@
                             <constraint firstItem="DmL-rj-nNK" firstAttribute="top" secondItem="VDL-z8-ee1" secondAttribute="bottom" constant="10" id="R01-rg-uKA"/>
                             <constraint firstItem="08Y-Rm-oQ0" firstAttribute="centerX" secondItem="FeX-Cx-kkN" secondAttribute="centerX" id="RUE-Sl-Cqs"/>
                             <constraint firstItem="08Y-Rm-oQ0" firstAttribute="top" secondItem="DmL-rj-nNK" secondAttribute="bottom" constant="10" id="Rbz-ka-Lbe"/>
-                            <constraint firstItem="UKT-JE-7lY" firstAttribute="centerX" secondItem="FeX-Cx-kkN" secondAttribute="centerX" id="SX0-H1-rMo"/>
                             <constraint firstItem="DmL-rj-nNK" firstAttribute="centerX" secondItem="FeX-Cx-kkN" secondAttribute="centerX" id="TtX-L9-1mB"/>
                             <constraint firstItem="VDL-z8-ee1" firstAttribute="centerX" secondItem="FeX-Cx-kkN" secondAttribute="centerX" id="Xso-8B-AFn"/>
                             <constraint firstItem="VDL-z8-ee1" firstAttribute="width" secondItem="oPk-fr-bho" secondAttribute="width" id="aNh-pV-3uV"/>
                             <constraint firstItem="DmL-rj-nNK" firstAttribute="centerY" secondItem="FeX-Cx-kkN" secondAttribute="centerY" id="b44-wE-4tt"/>
+                            <constraint firstItem="UKT-JE-7lY" firstAttribute="centerY" secondItem="FeX-Cx-kkN" secondAttribute="centerY" constant="335" id="bQA-4I-7gx"/>
                             <constraint firstItem="oPk-fr-bho" firstAttribute="centerX" secondItem="FeX-Cx-kkN" secondAttribute="centerX" id="jBu-6E-q3M"/>
                             <constraint firstItem="08Y-Rm-oQ0" firstAttribute="width" secondItem="VDL-z8-ee1" secondAttribute="width" id="n7y-HW-keh"/>
-                            <constraint firstItem="3nv-KQ-Jtw" firstAttribute="bottom" secondItem="UKT-JE-7lY" secondAttribute="bottom" constant="10" id="oDv-O8-mll"/>
                             <constraint firstItem="08Y-Rm-oQ0" firstAttribute="height" secondItem="VDL-z8-ee1" secondAttribute="height" id="oND-ef-QIN"/>
                             <constraint firstItem="oPk-fr-bho" firstAttribute="top" secondItem="3nv-KQ-Jtw" secondAttribute="top" constant="30" id="qNG-va-6zj"/>
                             <constraint firstItem="VDL-z8-ee1" firstAttribute="top" secondItem="oPk-fr-bho" secondAttribute="bottom" constant="10" id="vTa-D9-Iij"/>
@@ -256,12 +253,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CcA-6B-6mr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1221" y="858"/>
+            <point key="canvasLocation" x="-1235" y="858"/>
         </scene>
         <!--Forgot Password Controller-->
         <scene sceneID="HwZ-ZM-Pf2">
             <objects>
-                <viewController id="jg9-IY-NzE" customClass="ForgotPasswordController" customModule="ChatApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="jg9-IY-NzE" customClass="ForgotPasswordController" customModule="ChatTeam" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QKc-wj-EGw">
                         <rect key="frame" x="0.0" y="0.0" width="428" height="872"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -359,7 +356,7 @@
         <!--Registration Controller-->
         <scene sceneID="WcH-th-BMg">
             <objects>
-                <viewController id="V2U-V7-Xu6" customClass="RegistrationController" customModule="ChatApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="V2U-V7-Xu6" customClass="RegistrationController" customModule="ChatTeam" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6Ta-Ec-JNj">
                         <rect key="frame" x="0.0" y="0.0" width="428" height="872"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -608,7 +605,7 @@
         <!--Conversation Controller-->
         <scene sceneID="oX0-6S-mmp">
             <objects>
-                <viewController storyboardIdentifier="tabVC" id="cyO-ne-gtX" customClass="ConversationController" customModule="ChatApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="tabVC" id="cyO-ne-gtX" customClass="ConversationController" customModule="ChatTeam" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="iU3-zb-Hga">
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -632,7 +629,7 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="channelCell" id="iow-i6-P4H">
-                                        <rect key="frame" x="0.0" y="28" width="428" height="43.666667938232422"/>
+                                        <rect key="frame" x="0.0" y="24.333333969116211" width="428" height="43.666667938232422"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="iow-i6-P4H" id="l3H-Yc-09Q">
                                             <rect key="frame" x="0.0" y="0.0" width="428" height="43.666667938232422"/>
@@ -686,21 +683,21 @@
         <scene sceneID="aMO-W6-frI">
             <objects>
                 <viewController id="ijP-KP-I3c" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="LSf-lr-i5C">
+                    <view key="view" contentMode="scaleToFill" id="LSf-lr-i5C">
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="rectangleGredient" translatesAutoresizingMaskIntoConstraints="NO" id="BQm-U8-pUY">
                                 <rect key="frame" x="14.666666666666657" y="-68" width="399" height="265"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="newmsgImage" translatesAutoresizingMaskIntoConstraints="NO" id="UPm-XQ-b7o">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="newmsgImage" translatesAutoresizingMaskIntoConstraints="NO" id="UPm-XQ-b7o">
                                 <rect key="frame" x="156" y="77" width="103" height="15"/>
                             </imageView>
-                            <searchBar contentMode="redraw" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="u2K-bh-aRG">
-                                <rect key="frame" x="0.0" y="215" width="428" height="56"/>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="u2K-bh-aRG">
+                                <rect key="frame" x="0.0" y="220" width="428" height="51"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="SzV-Jp-nxU">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="SzV-Jp-nxU">
                                 <rect key="frame" x="0.0" y="271" width="428" height="548"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
@@ -709,7 +706,7 @@
                                 </constraints>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="w5T-WS-51v">
-                                        <rect key="frame" x="0.0" y="28" width="428" height="43.666667938232422"/>
+                                        <rect key="frame" x="0.0" y="24.333333969116211" width="428" height="43.666667938232422"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="w5T-WS-51v" id="cII-QN-ZcA">
                                             <rect key="frame" x="0.0" y="0.0" width="428" height="43.666667938232422"/>
@@ -721,7 +718,7 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WmK-QX-Szi">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WmK-QX-Szi">
                                 <rect key="frame" x="350" y="115" width="38" height="22"/>
                                 <state key="normal" image="cancel"/>
                             </button>
@@ -761,7 +758,7 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="133" id="F5B-Rv-Agf">
-                                        <rect key="frame" x="0.0" y="28" width="428" height="133"/>
+                                        <rect key="frame" x="0.0" y="24.333333969116211" width="428" height="133"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="F5B-Rv-Agf" id="a0O-QI-tCW">
                                             <rect key="frame" x="0.0" y="0.0" width="428" height="133"/>
@@ -844,12 +841,12 @@
         <!--Profile View Controller-->
         <scene sceneID="RvR-9h-QPm">
             <objects>
-                <viewController id="IAZ-6O-uHs" customClass="ProfileViewController" customModule="ChatApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="xpF-R7-kU9" customClass="GradientBackgroundView" customModule="ChatApp" customModuleProvider="target">
+                <viewController id="IAZ-6O-uHs" customClass="ProfileViewController" customModule="ChatTeam" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xpF-R7-kU9" customClass="GradientBackgroundView" customModule="ChatTeam" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Zn-Eq-NIv" customClass="GradientBackgroundView" customModule="ChatApp" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Zn-Eq-NIv" customClass="GradientBackgroundView" customModule="ChatTeam" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="428" height="391.33333333333331"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vuC-vf-rXW">
@@ -903,7 +900,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="eQ9-Od-TfZ">
                                 <rect key="frame" x="20" y="411.33333333333331" width="388" height="107.99999999999994"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T8u-re-01u" customClass="ProfileRowView" customModule="ChatApp" customModuleProvider="target">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T8u-re-01u" customClass="ProfileRowView" customModule="ChatTeam" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="388" height="50"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
@@ -915,7 +912,7 @@
                                             <userDefinedRuntimeAttribute type="image" keyPath="trailingImage" value="chevron.forward" catalog="system"/>
                                         </userDefinedRuntimeAttributes>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TyL-8y-QGl" customClass="ProfileRowView" customModule="ChatApp" customModuleProvider="target">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TyL-8y-QGl" customClass="ProfileRowView" customModule="ChatTeam" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="58" width="388" height="50"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <userDefinedRuntimeAttributes>
@@ -926,7 +923,7 @@
                                     </view>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M2u-sz-8hL" customClass="FillButton" customModule="ChatApp" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M2u-sz-8hL" customClass="FillButton" customModule="ChatTeam" customModuleProvider="target">
                                 <rect key="frame" x="20" y="559.33333333333337" width="388" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="Xs0-TH-hSs"/>
@@ -968,8 +965,8 @@
         <!--Account Info View Controller-->
         <scene sceneID="kpH-e0-b1n">
             <objects>
-                <viewController storyboardIdentifier="AccountInfoViewController" id="EaA-5Y-oDT" customClass="AccountInfoViewController" customModule="ChatApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Ucw-mT-ntM" customClass="GradientBackgroundView" customModule="ChatApp" customModuleProvider="target">
+                <viewController storyboardIdentifier="AccountInfoViewController" id="EaA-5Y-oDT" customClass="AccountInfoViewController" customModule="ChatTeam" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ucw-mT-ntM" customClass="GradientBackgroundView" customModule="ChatTeam" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -1062,7 +1059,7 @@
         <!--Setting Collection View Controller-->
         <scene sceneID="qeA-2l-OQ9">
             <objects>
-                <collectionViewController storyboardIdentifier="SettingCollectionViewController" id="yMO-dm-eaN" customClass="SettingCollectionViewController" customModule="ChatApp" customModuleProvider="target" sceneMemberID="viewController">
+                <collectionViewController storyboardIdentifier="SettingCollectionViewController" id="yMO-dm-eaN" customClass="SettingCollectionViewController" customModule="ChatTeam" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="xYc-De-cWH">
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1129,9 +1126,6 @@
         <designable name="QPE-eV-Okk">
             <size key="intrinsicContentSize" width="180" height="24"/>
         </designable>
-        <designable name="YXN-FC-V1w">
-            <size key="intrinsicContentSize" width="142.33333333333334" height="26"/>
-        </designable>
         <designable name="k4K-j0-EoQ">
             <size key="intrinsicContentSize" width="145" height="28"/>
         </designable>
@@ -1141,8 +1135,6 @@
     </designables>
     <resources>
         <image name="AccountInfo" width="34" height="34"/>
-        <image name="Decoration" width="92.666664123535156" height="69"/>
-        <image name="Logo" width="81.333335876464844" height="26"/>
         <image name="SignUpBtn1" width="320" height="52"/>
         <image name="alreadyHaveAnAccount" width="139" height="12"/>
         <image name="cancel" width="38" height="12"/>

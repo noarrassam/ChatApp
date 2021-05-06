@@ -27,14 +27,17 @@ class SettingCollectionViewController: UICollectionViewController {
         navigationController?.setNavigationBarHidden(false, animated: true)
     }
     
+    // Number of secitons in collection view
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
         Setting.allCases.count
     }
     
+    // Number of secitons in collection rows
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         Setting.allCases[section].numberOfRows
     }
     
+    // Setting constraints, specifying the cell
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         switch Setting.allCases[indexPath.section] {
         case .switches:
@@ -48,13 +51,14 @@ class SettingCollectionViewController: UICollectionViewController {
                 view.leadingAnchor.constraint(equalTo: cell.leadingAnchor, constant: 20),
                 view.trailingAnchor.constraint(equalTo: cell.trailingAnchor, constant: -20)
             ])
+            // Checking the session current state and avatar in chat
             switch SwitchRow.allCases[indexPath.item] {
             case .saveSession:
                 view.leadingText = "Save current session"
                 view.switchIsOn = Service.shared.isAutoLoginEnabled
                 view.switchValue = { Service.shared.isAutoLoginEnabled = $0 }
             case .showProfile:
-                view.leadingText = "Show avatar in chat"
+                view.leadingText = "Hide avatar in chat"
                 view.switchIsOn = Service.shared.isAvatarShowEnabled
                 view.switchValue = { Service.shared.isAvatarShowEnabled = $0 }
             }
@@ -89,6 +93,7 @@ extension SettingCollectionViewController: UICollectionViewDelegateFlowLayout {
     }
 }
 
+// Setting Swiches and Stepper
 extension SettingCollectionViewController {
     enum Setting: CaseIterable {
         case switches
@@ -104,6 +109,7 @@ extension SettingCollectionViewController {
         }
     }
     
+  // Switch Row
     enum SwitchRow: CaseIterable {
         case showProfile
         case saveSession

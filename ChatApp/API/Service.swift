@@ -15,6 +15,7 @@ class Service {
     
     private var auth = Auth.auth()
     
+    // Fetching Users information
     func fetchUsers(type: FetchType, _ users: @escaping ([ATCUser]) -> ()) {
         Firestore.firestore().collection("users").getDocuments { snapshot, error in
             var items = [ATCUser]()
@@ -38,6 +39,7 @@ class Service {
         }
     }
     
+    // User Session 
     var isAutoLoginEnabled: Bool {
         get {
             UserDefaults.standard.bool(forKey: "AutoLogin")
@@ -47,11 +49,13 @@ class Service {
         }
     }
     
+    // AvatarShowEnabled
     var isAvatarShowEnabled: Bool {
         get { UserDefaults.standard.bool(forKey: "AvatarShowEnabled") }
         set { UserDefaults.standard.setValue(newValue, forKey: "AvatarShowEnabled")  }
     }
     
+    // StoredCredential
     var storedCredential: (email: String, password: String) {
         get {
             let email = UserDefaults.standard.string(forKey: "Email") ?? ""

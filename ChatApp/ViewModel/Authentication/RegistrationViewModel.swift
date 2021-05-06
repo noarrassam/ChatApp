@@ -7,6 +7,7 @@
 
 import Foundation
 
+// Registraiton Form Validation
 struct RegistrationViewModel: AuthenticationProtocol {
     var email: String?
     var password: String?

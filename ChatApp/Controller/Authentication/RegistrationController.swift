@@ -30,11 +30,13 @@ class RegistrationController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    // Creating a delegate to the image picker
     @objc func handleSelectPhoto(){
         let imagePickerController = UIImagePickerController()
         imagePickerController.delegate = self
         present(imagePickerController, animated: true, completion: nil)
     }
+    
     
     @objc func keyboardWillShow() {
         if view.frame.origin.y == 0 {
@@ -48,6 +50,7 @@ class RegistrationController: UIViewController {
         }
     }
     
+    // Check if registration form is fullfilled.
     @objc func textDidChange(sender: UITextField){
         if sender == email {
             viewModel.email = sender.text
@@ -65,6 +68,7 @@ class RegistrationController: UIViewController {
         dismiss(animated: true, completion: nil)
     }
     
+    // Plus button on registraiton
     @IBAction func PlusButton(_ sender: Any) {
         plusBtn.tintColor = .white
         plusBtn.clipsToBounds = true
@@ -76,6 +80,7 @@ class RegistrationController: UIViewController {
         handleShowLogin() 
     }
     
+    // Handle User Registration
     @objc func handleRegistration() {
         guard let email = email.text else {return}
         guard let password = password.text else {return}
@@ -85,8 +90,10 @@ class RegistrationController: UIViewController {
         
         let credentials = RegistrationCredentials(email: email, password: password, fullname: fullname, username: username, profileImage: profileImage)
         
+        // Loader message conatins a progress bar
         showLoader(true, withText:"Sigining You Up")
         
+        // Checking if user verified
         AuthService.shared.createUser(credentials: credentials) { error in
             if let error = error {
                 print("DEBUG: \(error.localizedDescription)")
@@ -105,6 +112,7 @@ class RegistrationController: UIViewController {
         handleRegistration()
     }
     
+    // adding constraints
     func configureUI() {
         signUp.isEnabled = false
         plusBtn.frame.size = CGSize(width: 120, height: 120)
@@ -135,10 +143,11 @@ extension RegistrationController: UIImagePickerControllerDelegate, UINavigationC
         plusBtn.layer.borderColor = UIColor(white: 1, alpha: 0.7).cgColor
         plusBtn.layer.borderWidth = 3.0
         plusBtn.layer.cornerRadius = 120 / 2
-        //plusBtn.imageView?.contentMode = .scaleAspectFill
         dismiss(animated: true, completion: nil)
     }
 }
+
+// Registraiton Form Validation
 extension RegistrationController: AuthenticiationControllerProtocol {
     func checkFormStatus() {
         if viewModel.formIsValid {

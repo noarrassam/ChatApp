@@ -7,6 +7,7 @@
 
 import Foundation
 
+// Login Form Validation
 protocol AuthenticationProtocol {
     var formIsValid: Bool {get}
 }

@@ -20,6 +20,7 @@ struct RegistrationCredentials {
 struct AuthService {
     static let shared = AuthService()
     
+    // Check weather user exists in Firebase in order to login
     func logUserIn(withEmail email: String, password: String, completion: @escaping (_ response: Any?, _ error: Error?) -> Void) {
         guard let user = Auth.auth().currentUser else {
             Auth.auth().signIn(withEmail: email, password: password) { (result, error) in
@@ -33,8 +34,7 @@ struct AuthService {
                 return
         }
         
-        //print("DEBUG: User logged in  \(Auth.auth().currentUser?.uid)")
-
+        // Checking weather email veriefied or not in order to signin
         user.reload { (error) in
             switch user.isEmailVerified {
             case true:
@@ -79,6 +79,7 @@ struct AuthService {
         return Auth.auth().currentUser
     }
     
+    // Email Verification Function
     public func sendVerificationMail() {
         if self.authUser != nil && !self.authUser!.isEmailVerified {
             self.authUser!.sendEmailVerification(completion: { (error) in
@@ -104,11 +105,13 @@ struct AuthService {
             
             ref.downloadURL { (url, error) in
                 guard let profileImageUrl = url?.absoluteString else {return}
+                // Creating users
                 Auth.auth().createUser(withEmail: credentials.email, password: credentials.password) { (result, error) in
                     if let error = error {
                         print("DEBUG: Failed to create user with error: \(error.localizedDescription)")
                         return
                     }
+                    // Sending email verification
                     sendVerificationMail()
                     guard let uid = result?.user.uid else {return}
                     
