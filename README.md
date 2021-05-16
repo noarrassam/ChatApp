@@ -1,5 +1,5 @@
 # Names
-## Noar Rassam - 
+## Noar Rassam
 ## Xirui Chen
 ## Naeimeh Jalali
 
