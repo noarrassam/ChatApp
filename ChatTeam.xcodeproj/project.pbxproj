@@ -276,6 +276,7 @@
 		F80320FA26250CB900286194 /* RegistrationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewModel.swift; sourceTree = "<group>"; };
 		F803210726251A7F00286194 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		F82774E12627C5E1006D6BF3 /* ForgotPasswordController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordController.swift; sourceTree = "<group>"; };
+		F85736742651C6A700BF8503 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		F868EC43263B2FFB00C31E3A /* TermsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsViewController.swift; sourceTree = "<group>"; };
 		F89BEF1D2623D8A80038B92A /* ConversationsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationsController.swift; sourceTree = "<group>"; };
 		F89BEF4A2623E8040038B92A /* Extentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extentions.swift; sourceTree = "<group>"; };
@@ -661,6 +662,13 @@
 			path = Authentication;
 			sourceTree = "<group>";
 		};
+		F85736752651C86B00BF8503 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
 		F89BEF172623D8140038B92A /* Utils */ = {
 			isa = PBXGroup;
 			children = (
@@ -706,6 +714,8 @@
 		F8FA714F2607A1150051F286 = {
 			isa = PBXGroup;
 			children = (
+				F85736752651C86B00BF8503 /* Images */,
+				F85736742651C6A700BF8503 /* README.md */,
 				F8FA715A2607A1150051F286 /* ChatApp */,
 				F8FA71742607A1160051F286 /* ChatAppTests */,
 				F8FA717F2607A1160051F286 /* ChatAppUITests */,
