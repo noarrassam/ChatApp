@@ -1,5 +1,5 @@
 # Names
-## Noar Rassam
+## Noar Rassam - 
 ## Xirui Chen
 ## Naeimeh Jalali
 
@@ -58,10 +58,6 @@ It’s a chat app for social networking as we’re living in pandemic situation 
 ## **Chat**
 
 <img src="https://github.com/noarrassam/ChatApp/blob/main/Images/7.png" width="500" height="1000">
-
-## **New Amount**
-
-<img src="https://github.com/noarrassam/iOS_MidTerm_Project/blob/main/Images/12.jpg" width="500" height="1000">
 
 ## **User Info.**
 
