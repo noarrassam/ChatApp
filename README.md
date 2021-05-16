@@ -28,51 +28,45 @@ It’s a chat app for social networking as we’re living in pandemic situation 
 
 ## Features
 
-## **ToDo List**
+## **Home Screen**
 
-<img src="https://github.com/noarrassam/iOS_MidTerm_Project/blob/main/Images/2.jpg" width="500" height="1000">
+<img src="https://github.com/noarrassam/ChatApp/blob/main/Images/1.png" width="500" height="1000">
 
-## **New Reminder**
+## **Login Screen**
 
-<img src="https://github.com/noarrassam/iOS_MidTerm_Project/blob/main/Images/3.jpg" width="500" height="1000">
-<img src="https://github.com/noarrassam/iOS_MidTerm_Project/blob/main/Images/5.jpg" width="500" height="1000">
+<img src="https://github.com/noarrassam/ChatApp/blob/main/Images/2.png" width="500" height="1000">
 
-## **ToDo List Reminder**
+## **SignUp Screen**
 
-<img src="https://github.com/noarrassam/iOS_MidTerm_Project/blob/main/Images/6.jpg" width="500" height="1000">
-
-
-## **Calendar**
-
-<img src="https://github.com/noarrassam/iOS_MidTerm_Project/blob/main/Images/7.jpg" width="500" height="1000">
+<img src="https://github.com/noarrassam/ChatApp/blob/main/Images/3.png" width="500" height="1000">
 
 
-## **New Event**
+## **Terms&Conditions**
 
-<img src="https://github.com/noarrassam/iOS_MidTerm_Project/blob/main/Images/8.jpg" width="500" height="1000">
-
-## **Calendar Event**
-
-<img src="https://github.com/noarrassam/iOS_MidTerm_Project/blob/main/Images/9.jpg" width="500" height="1000">
+<img src="https://github.com/noarrassam/ChatApp/blob/main/Images/4.png" width="500" height="1000">
 
 
-## **Money Tracker**
+## **Messages**
 
-<img src="https://github.com/noarrassam/iOS_MidTerm_Project/blob/main/Images/10.jpg" width="500" height="1000">
+<img src="https://github.com/noarrassam/ChatApp/blob/main/Images/5.png" width="500" height="1000">
+
+## **Message Title&Subtitle**
+
+<img src="https://github.com/noarrassam/ChatApp/blob/main/Images/6.png" width="500" height="1000">
+
+
+## **Chat**
+
+<img src="https://github.com/noarrassam/ChatApp/blob/main/Images/7.png" width="500" height="1000">
 
 ## **New Amount**
 
 <img src="https://github.com/noarrassam/iOS_MidTerm_Project/blob/main/Images/12.jpg" width="500" height="1000">
 
-## **Money Tracker**
+## **User Info.**
 
-<img src="https://github.com/noarrassam/iOS_MidTerm_Project/blob/main/Images/10.jpg" width="500" height="1000">
+<img src="https://github.com/noarrassam/ChatApp/blob/main/Images/8.png" width="500" height="1000">
 
-<img src="https://github.com/noarrassam/iOS_MidTerm_Project/blob/main/Images/13.jpg" width="500" height="1000">
+## **Settings**
 
-## **Facebook Login**
-
-<img src="https://github.com/noarrassam/iOS_MidTerm_Project/blob/main/Images/23.png" width="500" height="1000">
-
-<img src="https://github.com/noarrassam/iOS_MidTerm_Project/blob/main/Images/24.png" width="500" height="1000">
-
+<img src="https://github.com/noarrassam/ChatApp/blob/main/Images/9.png" width="500" height="1000">
