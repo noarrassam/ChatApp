@@ -3,7 +3,7 @@
 ## Xirui Chen
 ## Naeimeh Jalali
 
-# iOS MidTerm Project
+# ChatTeam Project
 
 
 ## Description
