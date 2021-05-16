@@ -12,6 +12,7 @@ It’s a chat app for social networking as we’re living in pandemic situation 
 ## Functionalities
 
 * Firebase
+* Firestore
 * Adobe XD and Zeplin
 * Cocoapods 
 * Login and register
