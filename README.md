@@ -26,7 +26,7 @@ It’s a chat app for social networking as we’re living in pandemic situation 
 * Logout
 
 ## References
-* Udemy Course, [iOS 13 & Swift 5: Chat App With Firestore | MVVM](https://www.udemy.com/course/ios-13-swift-5-chat-app-with-firestore-mvvm/).
+* Dowloss, S. 2020. [iOS 13 & Swift 5: Chat App With Firestore | MVVM](https://www.udemy.com/course/ios-13-swift-5-chat-app-with-firestore-mvvm/).
 
 ## Features
 
