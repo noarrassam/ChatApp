@@ -3,7 +3,7 @@
 ## Xirui Chen
 ## Naeimeh Jalali
 
-# ChatTeam Project
+# ChatTeam Application 
 
 
 ## Description
