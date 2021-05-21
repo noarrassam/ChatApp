@@ -17,6 +17,7 @@ It’s a chat app for social networking as we’re living in pandemic situation 
 * Cocoapods 
 * Login and register
 * Email Verification
+* Validation
 * Forgot Password
 * Authentication
 * Send messages
